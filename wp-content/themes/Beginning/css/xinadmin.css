@@ -1,0 +1,156 @@
+body, textarea {
+    font-size: 14px;
+    font-family: "Microsoft Yahei", Arial, sans-serif !important;
+}
+
+input {
+    float: left;
+    width: 75%;
+    height: 37px;
+    line-height: 37px;
+    font: 14px "Microsoft YaHei", Helvetica;
+    padding: 2px 10px;
+    background: #ebebeb;
+    border: 1px solid #ebebeb;
+    border-radius: 2px 0 0 2px;
+    -webkit-appearance: none;
+}
+
+body {
+    background: #92C1D1 url('https://www.nekomiao.cn/wp-content/uploads/2017/10/8644ebf81a4c510ff721c89d6059252dd52aa54b.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.login h1 a {
+    background-image: url('https://www.nekomiao.cn/wp-content/uploads/2017/10/logo.png') !important;
+    background-size: 170px 35px;
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 170px;
+    margin: auto;
+    margin-top: 35px;
+    height: 35px;
+    text-indent: -9999px;
+    overflow: hidden;
+    padding-bottom: 15px;
+    display: block;
+}
+
+#login {
+    width: 320px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0 20px 100% 12px;
+    margin: auto;
+    top: 0px;
+    right: 15%;
+    position: fixed;
+    box-shadow: 0px 0px 5px 0px #333;
+}
+
+.login form {
+    margin-left: 8px;
+    padding: 26px 24px 46px;
+    font-weight: normal;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: #000 0 0px 10px -1px;
+}
+
+#loginform {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.login form .input, .login input[type="text"] {
+    color: #555;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 1;
+    width: 100%;
+    padding: 5px;
+    margin-top: 2px;
+    margin-right: 6px;
+    margin-bottom: 16px;
+    border: 1px solid #FFF;
+    background: #FFF !important;
+    outline: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.login form .input, .login input[type="text"] {
+    font-size: 17px;
+    padding-bottom: 11px;
+    padding-top: 11px;
+    text-indent: 3px;
+}
+
+.login form .input, .login input[type="text"] {
+    border: 2px solid #DCE4EC;
+}
+
+input.button-primary {
+    margin-top: 8px;
+    border: #000;
+    font-weight: bold;
+    text-shadow: #FFF 0 0px 10px;
+}
+
+.login .button-primary {
+    font-size: 14px !important;
+    line-height: 22px;
+    padding: 8px 117px;
+    border-radius: 0px;
+}
+
+input.button-primary {
+    background: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+input.button-primary:hover, input.button-primary:focus {
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+input.button-primary:active {
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+.login form .forgetmenot {
+    font-weight: normal;
+    float: none;
+    margin-top: -10px;
+}
+
+.login #nav, .login #backtoblog {
+    text-shadow: #FFF 0 0 5px, #FFF 0 0 10px;
+    float: right;
+    margin: 0 30px 0 0px;
+    padding: 16px 0px 0 20px;
+}
+
+.login #nav a, .login #backtoblog a {
+    color: #FFF !important;
+}
+
+.login #nav a:hover, .login #backtoblog a:hover {
+    color: #000 !important;
+}
+
+div.error, .login #login_error {
+    display: none;
+}
+
+div.updated, .login .message {
+    background-color: #E0FFE1;
+    border-color: #ACE655;
+}

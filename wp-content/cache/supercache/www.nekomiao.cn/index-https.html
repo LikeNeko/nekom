@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zh-CN">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<title>Neko - 又一个WordPress站点</title>
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="renderer" content="webkit"><meta http-equiv="Cache-Control" content="no-transform" /><meta http-equiv="Cache-Control" content="no-siteapp" /><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twemoji\/2.2.1\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/twemoji\/2.2.1\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.nekomiao.cn\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.2"}};
+			!function(a,b,c){function d(a){var b,c,d,e,f=String.fromCharCode;if(!k||!k.fillText)return!1;switch(k.clearRect(0,0,j.width,j.height),k.textBaseline="top",k.font="600 32px Arial",a){case"flag":return k.fillText(f(55356,56826,55356,56819),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,56826,8203,55356,56819),0,0),c=j.toDataURL(),b!==c&&(k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447),0,0),b=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447),0,0),c=j.toDataURL(),b!==c);case"emoji4":return k.fillText(f(55358,56794,8205,9794,65039),0,0),d=j.toDataURL(),k.clearRect(0,0,j.width,j.height),k.fillText(f(55358,56794,8203,9794,65039),0,0),e=j.toDataURL(),d!==e}return!1}function e(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i,j=b.createElement("canvas"),k=j.getContext&&j.getContext("2d");for(i=Array("flag","emoji4"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='dashicons-css'  href='https://www.nekomiao.cn/wp-includes/css/dashicons.min.css?ver=4.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-style-css'  href='https://www.nekomiao.cn/wp-content/themes/Beginning/style.css?ver=23' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='theme-ie8-css'  href='https://www.nekomiao.cn/wp-content/themes/Beginning/css/ie8.css?ver=23' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='theme-nprogress-css'  href='https://www.nekomiao.cn/wp-content/themes/Beginning/css/nprogress.css?ver=23' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-owl-carousel-css'  href='https://www.nekomiao.cn/wp-content/themes/Beginning/css/owl.carousel.css?ver=23' type='text/css' media='all' />
+<link rel='stylesheet' id='theme-responsive-css'  href='https://www.nekomiao.cn/wp-content/themes/Beginning/css/responsive.css?ver=23' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var theme_base_args = {"admin_ajax":"https:\/\/www.nekomiao.cn\/wp-admin\/admin-ajax.php","ajax_comment":"1","comment_loading":"\u6b63\u5728\u63d0\u4ea4...","ajax_load_page":"1","insert_smiley":"<a href=\"javascript:;\" data-smiley=\";-)\">\ud83d\ude09<\/a><a href=\"javascript:;\" data-smiley=\":|\">\ud83d\ude10<\/a><a href=\"javascript:;\" data-smiley=\":x\">\ud83d\ude21<\/a><a href=\"javascript:;\" data-smiley=\":twisted:\">\ud83d\ude08<\/a><a href=\"javascript:;\" data-smiley=\":smile:\">\ud83d\ude42<\/a><a href=\"javascript:;\" data-smiley=\":shock:\">\ud83d\ude2f<\/a><a href=\"javascript:;\" data-smiley=\":sad:\">\ud83d\ude41<\/a><a href=\"javascript:;\" data-smiley=\":roll:\">\ud83d\ude44<\/a><a href=\"javascript:;\" data-smiley=\":razz:\">\ud83d\ude1b<\/a><a href=\"javascript:;\" data-smiley=\":oops:\">\ud83d\ude33<\/a><a href=\"javascript:;\" data-smiley=\":o\">\ud83d\ude2e<\/a><a href=\"javascript:;\" data-smiley=\":mrgreen:\"><img src=\"https:\/\/www.nekomiao.cn\/wp-includes\/images\/smilies\/mrgreen.png\" alt=\":mrgreen:\" class=\"wp-smiley\" style=\"height: 1em; max-height: 1em;\" \/><\/a><a href=\"javascript:;\" data-smiley=\":lol:\">\ud83d\ude06<\/a><a href=\"javascript:;\" data-smiley=\":idea:\">\ud83d\udca1<\/a><a href=\"javascript:;\" data-smiley=\":grin:\">\ud83d\ude00<\/a><a href=\"javascript:;\" data-smiley=\":evil:\">\ud83d\udc7f<\/a><a href=\"javascript:;\" data-smiley=\":cry:\">\ud83d\ude25<\/a><a href=\"javascript:;\" data-smiley=\":cool:\">\ud83d\ude0e<\/a><a href=\"javascript:;\" data-smiley=\":arrow:\">\u27a1<\/a><a href=\"javascript:;\" data-smiley=\":???:\">\ud83d\ude15<\/a><a href=\"javascript:;\" data-smiley=\":?:\">\u2753<\/a><a href=\"javascript:;\" data-smiley=\":!:\">\u2757<\/a>","progress":"1","imageFirewall":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-content/themes/Beginning/js/base.js?ver=23'></script>
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-content/themes/Beginning/js/nprogress.js?ver=23'></script>
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-content/themes/Beginning/js/owl.carousel.min.js?ver=23'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-content/themes/Beginning/js/html5.js?ver=3.7.0'></script>
+<![endif]-->
+<link rel='https://api.w.org/' href='https://www.nekomiao.cn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.nekomiao.cn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.nekomiao.cn/wp-includes/wlwmanifest.xml" /> 
+<link rel="stylesheet" type="text/css" href="https://www.nekomiao.cn/wp-content/plugins/weichuncai/css/style.css"><script>var path = "https://www.nekomiao.cn";var imagewidth = '85';var imageheight = '152';</script><script src="https://www.nekomiao.cn/wp-content/plugins/weichuncai/js/common.js"></script><script>smWCC.createFace("https://www.nekomiao.cn/wp-content/plugins/weichuncai/skin/rakutori/face1.gif", "https://www.nekomiao.cn/wp-content/plugins/weichuncai/skin/rakutori/face2.gif", "https://www.nekomiao.cn/wp-content/plugins/weichuncai/skin/rakutori/face3.gif");</script><script>var talkself_user = [];smWCC.talkself_arr = smWCC.talkself_arr.concat(talkself_user);</script><style id="theme-css">#header .logo a{background-image: url(https://www.nekomiao.cn/wp-content/uploads/2017/10/logo.png);}#post-box.type-post .context p{text-indent: 2em;}a:hover,#header_menu .sub-menu .sub-menu > li.current-menu-item > a,#header_menu .sub-menu .sub-menu > li.current-menu-parent > a,#header_menu .sub-menu .sub-menu > li.current_page_item > a,#header_menu .sub-menu .sub-menu > li.current-post-ancestor > a,#header_menu .sub-menu .sub-menu > li.current-menu-item:hover > a,#header_menu .sub-menu .sub-menu > li.current-menu-parent:hover > a,#header_menu .sub-menu .sub-menu > li.current_page_item:hover > a,#header_menu .sub-menu .sub-menu > li.current-post-ancestor:hover > a,#header .control > li > a:hover,.related-posts > li .post-meta > li a:hover,.context a,.comments-list li .right-box > .comment-meta .edit-link a,.comments-list li .right-box > .comment-meta .reply a,.comments-list li .right-box > .waiting,.empty-sidebar .set-widget a,.sidebar-posts-list > li .post-meta > li:hover,.sidebar-posts-list > li .post-meta > li:hover a,.widget_rss cite,.widget_categories li a:hover,.widget_archive li a:hover,.widget_calendar tbody tr td a,#footer_menu > li.current-menu-item > a,#footer_menu > li.current-menu-parent > a,#footer_menu > li.current_page_item > a,#footer_menu > li.current-post-ancestor > a,#footer_menu > li > .sub-menu > li.current-menu-item > a,#footer_menu > li > .sub-menu > li.current-menu-parent > a,#footer_menu > li > .sub-menu > li.current_page_item > a,#footer_menu > li > .sub-menu > li.current-post-ancestor > a,#footer a:hover,#mobile-header .mobile-return,#mobile-menu li.current a,.hot-searches-list > li a,.slider .slider-text > .post-title{color: #24BEBE;}input[type=text]:focus,input[type=text]:hover:focus,input[type=password]:focus,input[type=password]:hover:focus,input[type=email]:focus,input[type=email]:hover:focus,input[type=url]:focus,input[type=url]:hover:focus,textarea:focus,textarea:hover:focus,select:focus,select:focus,select:hover:focus,select:hover:focus,.posts-list > li .thumbnail-link .thumbnail:hover,.posts-list > li .post-meta > li:hover,.page-navi a:hover,.page-navi .current,.related-posts > li .related-posts-panel:hover,.context img:hover,.comments-list > li:hover,.sidebar-posts-list > li:hover,.widget_calendar tbody #today,.widget_calendar tfoot tr td a,.widget_recent_comments li:hover,.widget_tag_cloud .list-box > a:hover,#header_menu > li > .sub-menu > li,#post-box .post-title,#post-box .post-meta-box .post-meta > li:hover,.posts-list > li .post-title{border-color: #24BEBE;}#nprogress .spinner-icon{border-top-color: #24BEBE;border-left-color: #24BEBE;}input[type=submit],button,.posts-list > li .post-meta > li:hover,.page-navi a:hover,.page-navi .current,.widget_calendar tbody #today,.widget_tag_cloud .list-box > a:hover,#nprogress .bar,#post-box .post-meta-box .post-meta > li:hover,#return-top,#header,.slider .slider-dots > .dot.active,.links-list .link-title{background-color: #24BEBE;}.posts-list > li .thumbnail-link .thumbnail:hover,.related-posts > li .related-posts-panel:hover,.context img:hover,.comments-list > li:hover,.sidebar-posts-list > li:hover,.widget_recent_comments li:hover{box-shadow: 0 0 2px #24BEBE;-moz-box-shadow: 0 0 2px #24BEBE;}#nprogress .peg{box-shadow: 0 0 10px #24BEBE, 0 0 5px #24BEBE;-moz-box-shadow: 0 0 10px #24BEBE, 0 0 5px #24BEBE;}#sidebar{width: 300px;}</style><link rel="icon" href="https://www.nekomiao.cn/wp-content/uploads/2017/08/cropped-84be870c156b65500df3e32b-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://www.nekomiao.cn/wp-content/uploads/2017/08/cropped-84be870c156b65500df3e32b-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="https://www.nekomiao.cn/wp-content/uploads/2017/08/cropped-84be870c156b65500df3e32b-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://www.nekomiao.cn/wp-content/uploads/2017/08/cropped-84be870c156b65500df3e32b-270x270.jpg" />
+	</head>
+	<body class="home blog">
+		<div id="wrapper">
+			<header id="header">
+				<div class="box-md">
+											<h1 class="logo">
+							<a href="https://www.nekomiao.cn" title="Neko | 又一个WordPress站点">Neko</a>
+						</h1>
+										<nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<ul id="header_menu"><li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-35"><a href="https://www.nekomiao.cn">首页</a></li>
+<li id="menu-item-76" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-76"><a href="https://www.nekomiao.cn/archive">归档</a></li>
+</ul>					</nav>
+					<ul class="control">
+						<li class="previous">
+							<a class="dashicons dashicons-arrow-left-alt" href="javascript:history.go( -1 );" title="后退"></a>
+						</li>
+						<li class="next">
+							<a class="dashicons dashicons-arrow-right-alt" href="javascript:history.go( 1 );" title="前进"></a>
+						</li>
+						<li class="refresh">
+							<a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="刷新"></a>
+						</li>
+					</ul>
+					<form method="get" class="search-form" action="https://www.nekomiao.cn">
+	<input class="search-text" name="s" autocomplete="off" placeholder="输入关键词搜索..." required="required" type="text" value="" />
+	<button class="search-submit" alt="搜索" type="submit">搜索</button>
+</form>				</div>
+						<div id="mobile-header">
+			<a href="javascript:history.go( -1 );" class="mobile-return">
+				<span class="dashicons dashicons-arrow-left-alt2"></span>返回			</a>
+			<div class="mobile-title">Neko</div>
+		</div>
+				</header>
+			<div class="box-md">
+								<div class="wrapper-table-box">	<section id="container">
+		<div class="row">
+					<div class="span12">
+			<div class="panel transparent no-padding slider no-js-hide owl-carousel" data-owl-carousel="{&quot;items&quot;:&quot;1&quot;,&quot;loop&quot;:&quot;1&quot;,&quot;smartSpeed&quot;:&quot;250&quot;,&quot;dots&quot;:true,&quot;dotsClass&quot;:&quot;slider-dots&quot;,&quot;dotClass&quot;:&quot;dot&quot;,&quot;autoplay&quot;:true,&quot;autoplayTimeout&quot;:5000}">
+									<article class="post-139 post type-post status-publish format-standard hentry category-uncategorized tag-5 tag-mei_you_xie_wan_de_keng tag-6">
+						<a href="https://www.nekomiao.cn/post-139.html" class="thumbnail-link" rel="bookmark" title="记刷噩梦脚本"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/6b6de01108e2-720x260.jpg" class="thumbnail" width="720" height="260" title="记刷噩梦脚本" alt="记刷噩梦脚本" /></a>						<a href="https://www.nekomiao.cn/post-139.html" class="slider-text" rel="bookmark">
+							<h3 class="post-title">记刷噩梦脚本</h3>							<p class="excerpt">1,目前已知工具及运行环境：</p>
+						</a>
+					</article>
+									<article class="post-82 post type-post status-publish format-standard hentry category-uncategorized">
+						<a href="https://www.nekomiao.cn/post-82.html" class="thumbnail-link" rel="bookmark" title="Phpstorm 的structure 栏不显示的问题 解决方案"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/3b32aac0d46f-720x260.jpg" class="thumbnail" width="720" height="260" title="Phpstorm 的structure 栏不显示的问题 解决方案" alt="Phpstorm 的structure 栏不显示的问题 解决方案" /></a>						<a href="https://www.nekomiao.cn/post-82.html" class="slider-text" rel="bookmark">
+							<h3 class="post-title">Phpstorm 的structure 栏不显示的问题 解决方案</h3>							<p class="excerpt">前言</p>
+						</a>
+					</article>
+									<article class="post-1 post type-post status-publish format-standard hentry category-uncategorized">
+						<a href="https://www.nekomiao.cn/post-1.html" class="thumbnail-link" rel="bookmark" title="世界，您好！"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/91ca08ce8f2f-720x260.jpg" class="thumbnail" width="720" height="260" title="世界，您好！" alt="世界，您好！" /></a>						<a href="https://www.nekomiao.cn/post-1.html" class="slider-text" rel="bookmark">
+							<h3 class="post-title">世界，您好！</h3>							<p class="excerpt">欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>
+						</a>
+					</article>
+							</div>
+		</div>
+	<ul class="posts-list">		<li class="span12 thumbnail post-139 post type-post status-publish format-standard hentry category-uncategorized tag-5 tag-mei_you_xie_wan_de_keng tag-6">
+			<article class="panel">
+				<header class="panel-header">
+					<h3 class="post-title"><a href="https://www.nekomiao.cn/post-139.html" title="记刷噩梦脚本" rel="bookmark">记刷噩梦脚本</a></h3>				</header>
+									<a href="https://www.nekomiao.cn/post-139.html" class="thumbnail-link" rel="bookmark" title="记刷噩梦脚本"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/6b6de01108e2-170x120.jpg" class="thumbnail" width="170" height="120" title="记刷噩梦脚本" alt="记刷噩梦脚本" /></a>					<div class="right-box">
+						<p class="excerpt">1,目前已知工具及运行环境：</p>
+						<ul class="post-meta">						<li class="author">
+							<span class="dashicons dashicons-admin-users"></span>
+							<a href="https://www.nekomiao.cn/post-author/neko" title="由Neko发布" rel="author">Neko</a>						</li>
+							<li class="date">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/10/08" title="《记刷噩梦脚本》的发布日期">
+								<time pubdate="pubdate">2017年10月8日</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了68次">
+								68							</a>
+						</li>
+	</ul>					</div>
+							</article>
+		</li>
+			<li class="span12 thumbnail post-82 post type-post status-publish format-standard hentry category-uncategorized">
+			<article class="panel">
+				<header class="panel-header">
+					<h3 class="post-title"><a href="https://www.nekomiao.cn/post-82.html" title="Phpstorm 的structure 栏不显示的问题 解决方案" rel="bookmark">Phpstorm 的structure 栏不显示的问题 解决方案</a></h3>				</header>
+									<a href="https://www.nekomiao.cn/post-82.html" class="thumbnail-link" rel="bookmark" title="Phpstorm 的structure 栏不显示的问题 解决方案"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/3b32aac0d46f-170x120.jpg" class="thumbnail" width="170" height="120" title="Phpstorm 的structure 栏不显示的问题 解决方案" alt="Phpstorm 的structure 栏不显示的问题 解决方案" /></a>					<div class="right-box">
+						<p class="excerpt">前言</p>
+						<ul class="post-meta">						<li class="author">
+							<span class="dashicons dashicons-admin-users"></span>
+							<a href="https://www.nekomiao.cn/post-author/neko" title="由Neko发布" rel="author">Neko</a>						</li>
+							<li class="date">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/08/29" title="《Phpstorm 的structure 栏不显示的问题 解决方案》的发布日期">
+								<time pubdate="pubdate">2017年8月29日</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了26次">
+								26							</a>
+						</li>
+	</ul>					</div>
+							</article>
+		</li>
+			<li class="span12 thumbnail post-1 post type-post status-publish format-standard hentry category-uncategorized">
+			<article class="panel">
+				<header class="panel-header">
+					<h3 class="post-title"><a href="https://www.nekomiao.cn/post-1.html" title="世界，您好！" rel="bookmark">世界，您好！</a></h3>				</header>
+									<a href="https://www.nekomiao.cn/post-1.html" class="thumbnail-link" rel="bookmark" title="世界，您好！"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/91ca08ce8f2f-170x120.jpg" class="thumbnail" width="170" height="120" title="世界，您好！" alt="世界，您好！" /></a>					<div class="right-box">
+						<p class="excerpt">欢迎使用WordPress。这是您的第一篇文章。编辑或删除它，然后开始写作吧！</p>
+						<ul class="post-meta">						<li class="author">
+							<span class="dashicons dashicons-admin-users"></span>
+							<a href="https://www.nekomiao.cn/post-author/neko" title="由Neko发布" rel="author">Neko</a>						</li>
+							<li class="date">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/08/23" title="《世界，您好！》的发布日期">
+								<time pubdate="pubdate">2017年8月23日</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了203次">
+								203							</a>
+						</li>
+	</ul>					</div>
+							</article>
+		</li>
+	</ul>		<div class="span12 posts-list-mobile-page-navi" data-next-link="">
+			<div class="panel">
+									<p class="help-text">全部加载完成</p>
+							</div>
+		</div>
+			</div>
+	</section>
+<aside id="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+	<ul class="row">
+		<li class="widget span12 widget_posts_list"><article class="panel"><header class="panel-header"><h3 class="widget-title">文章</h3></header><ul class="sidebar-posts-list">		<li class="thumbnail post-139 post type-post status-publish format-standard hentry category-uncategorized tag-5 tag-mei_you_xie_wan_de_keng tag-6">
+			<a href="https://www.nekomiao.cn/post-139.html" class="thumbnail-link" rel="bookmark" title="记刷噩梦脚本"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/6b6de01108e2-50x50.jpg" class="thumbnail" width="50" height="50" title="记刷噩梦脚本" alt="记刷噩梦脚本" /></a>			<div class="right-box">
+				<h4 class="post-title"><a href="https://www.nekomiao.cn/post-139.html" title="记刷噩梦脚本" rel="bookmark">记刷噩梦脚本</a></h4>				<ul class="post-meta">						<li class="date date-abb">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/10/08" title="发布于2017年10月08日">
+								<time pubdate="pubdate">10-08</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了68次">
+								68							</a>
+						</li>
+	</ul>			</div>
+		</li>
+			<li class="thumbnail post-82 post type-post status-publish format-standard hentry category-uncategorized">
+			<a href="https://www.nekomiao.cn/post-82.html" class="thumbnail-link" rel="bookmark" title="Phpstorm 的structure 栏不显示的问题 解决方案"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/3b32aac0d46f-50x50.jpg" class="thumbnail" width="50" height="50" title="Phpstorm 的structure 栏不显示的问题 解决方案" alt="Phpstorm 的structure 栏不显示的问题 解决方案" /></a>			<div class="right-box">
+				<h4 class="post-title"><a href="https://www.nekomiao.cn/post-82.html" title="Phpstorm 的structure 栏不显示的问题 解决方案" rel="bookmark">Phpstorm 的structure 栏不显示的问题 解决方案</a></h4>				<ul class="post-meta">						<li class="date date-abb">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/08/29" title="发布于2017年08月29日">
+								<time pubdate="pubdate">08-29</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了26次">
+								26							</a>
+						</li>
+	</ul>			</div>
+		</li>
+			<li class="thumbnail post-1 post type-post status-publish format-standard hentry category-uncategorized">
+			<a href="https://www.nekomiao.cn/post-1.html" class="thumbnail-link" rel="bookmark" title="世界，您好！"><img src="https://www.nekomiao.cn/wp-content/cache/Beginning/thumbnail/91ca08ce8f2f-50x50.jpg" class="thumbnail" width="50" height="50" title="世界，您好！" alt="世界，您好！" /></a>			<div class="right-box">
+				<h4 class="post-title"><a href="https://www.nekomiao.cn/post-1.html" title="世界，您好！" rel="bookmark">世界，您好！</a></h4>				<ul class="post-meta">						<li class="date date-abb">
+							<span class="dashicons dashicons-calendar"></span>
+							<a href="https://www.nekomiao.cn/post-date/2017/08/23" title="发布于2017年08月23日">
+								<time pubdate="pubdate">08-23</time>
+							</a>
+						</li>
+							<li class="views">
+							<span class="dashicons dashicons-visibility"></span>
+							<a href="javascript:;" title="浏览了203次">
+								203							</a>
+						</li>
+	</ul>			</div>
+		</li>
+	</ul></article></li><li class="widget_text widget span12 widget_custom_html"><article class="widget_text panel"><header class="panel-header"><h3 class="widget-title">小游戏（通关有神秘大礼包）</h3></header><div class="textwidget custom-html-widget"><style>
+   
+
+  
+
+        canvas {
+            display:block;
+            margin: 10px auto 10px;
+            border: 1px solid #333;
+            box-shadow: 0 0 16px 2px rgba(0,0,0,0.8);
+        }
+
+     
+    </style>
+
+<canvas id="canvas" width='200px' height='200px'></canvas>
+
+<script>
+    /* Customisable map data */
+
+    var map = {
+
+        tile_size: 16,
+
+        /*
+
+        Key vairables:
+
+        id       [required] - an integer that corresponds with a tile in the data array.
+        colour   [required] - any javascript compatible colour variable.
+        solid    [optional] - whether the tile is solid or not, defaults to false.
+        bounce   [optional] - how much velocity is preserved upon hitting the tile, 0.5 is half.
+        jump     [optional] - whether the player can jump while over the tile, defaults to false.
+        friction [optional] - friction of the tile, must have X and Y values (e.g {x:0.5, y:0.5}).
+        gravity  [optional] - gravity of the tile, must have X and Y values (e.g {x:0.5, y:0.5}).
+        fore     [optional] - whether the tile is drawn in front of the player, defaults to false.
+        script   [optional] - refers to a script in the scripts section, executed if it is touched.
+
+        */
+
+        keys: [
+            {id: 0, colour: '#333', solid: 0},
+            {id: 1, colour: '#888', solid: 0},
+            {id: 2,colour: '#555',solid: 1,bounce: 0.35},
+            {id: 3,colour: 'rgba(121, 220, 242, 0.4)',friction: {x: 0.9,y: 0.9},gravity: {x: 0,y: 0.1},jump: 1,fore: 1},
+            {id: 4,colour: '#777',jump: 1},
+            {id: 5,colour: '#E373FA',solid: 1,bounce: 1.1},
+            {id: 6,colour: '#666',solid: 1,bounce: 0},
+            {id: 7,colour: '#73C6FA',solid: 0,script: 'change_colour'},
+            {id: 8,colour: '#FADF73',solid: 0,script: 'next_level'},
+            {id: 9,colour: '#C93232',solid: 0,script: 'death'},
+            {id: 10,colour: '#555',solid: 1},
+            {id: 11,colour: '#0FF',solid: 0,script: 'unlock'}
+        ],
+
+        /* An array representing the map tiles. Each number corresponds to a key */
+        data: [
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 6, 6, 6, 6, 6, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 1, 1, 1, 1, 1, 2, 2, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 7, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 4, 2, 2, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2, 2, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4, 2, 1, 2],
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            [2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2],
+            [2, 1, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2],
+            [2, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 4, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2],
+            [2, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 4, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 8, 1, 1, 1, 2],
+            [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2],
+            [2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 9, 9, 9, 2, 10, 10, 10, 10, 10, 10, 1, 1, 1, 1, 1, 1, 1, 11, 2, 2, 2, 2, 4, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 10, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 2, 2, 2, 2, 2, 2, 2],
+            [2, 6, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 2, 1, 1, 1, 1, 1, 1, 2],
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2],
+            [2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 2, 2, 2, 2, 2, 2, 6, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2],
+            [2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 2, 5, 5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
+            [2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5, 5, 5, 1, 1, 1, 1, 1, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2],
+            [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
+        ],
+
+        /* Default gravity of the map */
+
+        gravity: {
+            x: 0,
+            y: 0.3
+        },
+
+        /* Velocity limits */
+
+        vel_limit: {
+            x: 2,
+            y: 16
+        },
+
+        /* Movement speed when the key is pressed */
+
+        movement_speed: {
+            jump: 6,
+            left: 0.3,
+            right: 0.3
+        },
+
+        /* The coordinates at which the player spawns and the colour of the player */
+
+        player: {
+            x: 2,
+            y: 2,
+            colour: '#FF9900'
+        },
+
+        /* scripts refered to by the "script" variable in the tile keys */
+
+        scripts: {
+            /* you can just use "this" instead of your engine variable ("game"), but Codepen doesn't like it */
+            change_colour: 'game.player.colour = "#"+(Math.random()*0xFFFFFF<<0).toString(16);',
+            /* you could load a new map variable here */
+            next_level: 'alert("Yay! You won! Reloading map.");game.load_map(map);',
+            death: 'alert("You died!");game.load_map(map);',
+            unlock: 'game.current_map.keys[10].solid = 0;game.current_map.keys[10].colour = "#888";'
+        }
+    };
+
+    /* Clarity engine */
+
+    var Clarity = function () {
+
+        this.alert_errors   = false;
+        this.log_info       = true;
+        this.tile_size      = 16;
+        this.limit_viewport = false;
+        this.jump_switch    = 0;
+
+        this.viewport = {
+            x: 200,
+            y: 200
+        };
+
+        this.camera = {
+            x: 0,
+            y: 0
+        };
+
+        this.key = {
+            left: false,
+            right: false,
+            up: false
+        };
+
+        this.player = {
+
+            loc: {
+                x: 0,
+                y: 0
+            },
+
+            vel: {
+                x: 0,
+                y: 0
+            },
+
+            can_jump: true
+        };
+
+        window.onkeydown = this.keydown.bind(this);
+        window.onkeyup   = this.keyup.bind(this);
+    };
+
+    Clarity.prototype.error = function (message) {
+
+        if (this.alert_errors) alert(message);
+        if (this.log_info) console.log(message);
+    };
+
+    Clarity.prototype.log = function (message) {
+
+        if (this.log_info) console.log(message);
+    };
+
+    Clarity.prototype.set_viewport = function (x, y) {
+
+        this.viewport.x = x;
+        this.viewport.y = y;
+    };
+
+    Clarity.prototype.keydown = function (e) {
+
+        var _this = this;
+
+        switch (e.keyCode) {
+            case 37:
+                _this.key.left = true;
+                break;
+            case 38:
+                _this.key.up = true;
+                break;
+            case 39:
+                _this.key.right = true;
+                break;
+        }
+    };
+
+    Clarity.prototype.keyup = function (e) {
+
+        var _this = this;
+
+        switch (e.keyCode) {
+            case 37:
+                _this.key.left = false;
+                break;
+            case 38:
+                _this.key.up = false;
+                break;
+            case 39:
+                _this.key.right = false;
+                break;
+        }
+    };
+
+    Clarity.prototype.load_map = function (map) {
+
+        if (typeof map      === 'undefined'
+            || typeof map.data === 'undefined'
+            || typeof map.keys === 'undefined') {
+
+            this.error('Error: Invalid map data!');
+
+            return false;
+        }
+
+        this.current_map = map;
+
+        this.current_map.background = map.background || '#333';
+        this.current_map.gravity = map.gravity || {x: 0, y: 0.3};
+        this.tile_size = map.tile_size || 16;
+
+        var _this = this;
+
+        this.current_map.width = 0;
+        this.current_map.height = 0;
+
+        map.keys.forEach(function (key) {
+
+            map.data.forEach(function (row, y) {
+
+                _this.current_map.height = Math.max(_this.current_map.height, y);
+
+                row.forEach(function (tile, x) {
+
+                    _this.current_map.width = Math.max(_this.current_map.width, x);
+
+                    if (tile == key.id)
+                        _this.current_map.data[y][x] = key;
+                });
+            });
+        });
+
+        this.current_map.width_p = this.current_map.width * this.tile_size;
+        this.current_map.height_p = this.current_map.height * this.tile_size;
+
+        this.player.loc.x = map.player.x * this.tile_size || 0;
+        this.player.loc.y = map.player.y * this.tile_size || 0;
+        this.player.colour = map.player.colour || '#000';
+
+        this.key.left  = false;
+        this.key.up    = false;
+        this.key.right = false;
+
+        this.camera = {
+            x: 0,
+            y: 0
+        };
+
+        this.player.vel = {
+            x: 0,
+            y: 0
+        };
+
+        this.log('Successfully loaded map data.');
+
+        return true;
+    };
+
+    Clarity.prototype.get_tile = function (x, y) {
+
+        return (this.current_map.data[y] && this.current_map.data[y][x]) ? this.current_map.data[y][x] : 0;
+    };
+
+    Clarity.prototype.draw_tile = function (x, y, tile, context) {
+
+        if (!tile || !tile.colour) return;
+
+        context.fillStyle = tile.colour;
+        context.fillRect(
+            x,
+            y,
+            this.tile_size,
+            this.tile_size
+        );
+    };
+
+    Clarity.prototype.draw_map = function (context, fore) {
+
+        for (var y = 0; y < this.current_map.data.length; y++) {
+
+            for (var x = 0; x < this.current_map.data[y].length; x++) {
+
+                if ((!fore && !this.current_map.data[y][x].fore) || (fore && this.current_map.data[y][x].fore)) {
+
+                    var t_x = (x * this.tile_size) - this.camera.x;
+                    var t_y = (y * this.tile_size) - this.camera.y;
+
+                    if(t_x < -this.tile_size
+                        || t_y < -this.tile_size
+                        || t_x > this.viewport.x
+                        || t_y > this.viewport.y) continue;
+
+                    this.draw_tile(
+                        t_x,
+                        t_y,
+                        this.current_map.data[y][x],
+                        context
+                    );
+                }
+            }
+        }
+
+        if (!fore) this.draw_map(context, true);
+    };
+
+    Clarity.prototype.move_player = function () {
+
+        var tX = this.player.loc.x + this.player.vel.x;
+        var tY = this.player.loc.y + this.player.vel.y;
+
+        var offset = Math.round((this.tile_size / 2) - 1);
+
+        var tile = this.get_tile(
+            Math.round(this.player.loc.x / this.tile_size),
+            Math.round(this.player.loc.y / this.tile_size)
+        );
+
+        if(tile.gravity) {
+
+            this.player.vel.x += tile.gravity.x;
+            this.player.vel.y += tile.gravity.y;
+
+        } else {
+
+            this.player.vel.x += this.current_map.gravity.x;
+            this.player.vel.y += this.current_map.gravity.y;
+        }
+
+        if (tile.friction) {
+
+            this.player.vel.x *= tile.friction.x;
+            this.player.vel.y *= tile.friction.y;
+        }
+
+        var t_y_up   = Math.floor(tY / this.tile_size);
+        var t_y_down = Math.ceil(tY / this.tile_size);
+        var y_near1  = Math.round((this.player.loc.y - offset) / this.tile_size);
+        var y_near2  = Math.round((this.player.loc.y + offset) / this.tile_size);
+
+        var t_x_left  = Math.floor(tX / this.tile_size);
+        var t_x_right = Math.ceil(tX / this.tile_size);
+        var x_near1   = Math.round((this.player.loc.x - offset) / this.tile_size);
+        var x_near2   = Math.round((this.player.loc.x + offset) / this.tile_size);
+
+        var top1    = this.get_tile(x_near1, t_y_up);
+        var top2    = this.get_tile(x_near2, t_y_up);
+        var bottom1 = this.get_tile(x_near1, t_y_down);
+        var bottom2 = this.get_tile(x_near2, t_y_down);
+        var left1   = this.get_tile(t_x_left, y_near1);
+        var left2   = this.get_tile(t_x_left, y_near2);
+        var right1  = this.get_tile(t_x_right, y_near1);
+        var right2  = this.get_tile(t_x_right, y_near2);
+
+
+        if (tile.jump && this.jump_switch > 15) {
+
+            this.player.can_jump = true;
+
+            this.jump_switch = 0;
+
+        } else this.jump_switch++;
+
+        this.player.vel.x = Math.min(Math.max(this.player.vel.x, -this.current_map.vel_limit.x), this.current_map.vel_limit.x);
+        this.player.vel.y = Math.min(Math.max(this.player.vel.y, -this.current_map.vel_limit.y), this.current_map.vel_limit.y);
+
+        this.player.loc.x += this.player.vel.x;
+        this.player.loc.y += this.player.vel.y;
+
+        this.player.vel.x *= .9;
+
+        if (left1.solid || left2.solid || right1.solid || right2.solid) {
+
+            /* fix overlap */
+
+            while (this.get_tile(Math.floor(this.player.loc.x / this.tile_size), y_near1).solid
+            || this.get_tile(Math.floor(this.player.loc.x / this.tile_size), y_near2).solid)
+                this.player.loc.x += 0.1;
+
+            while (this.get_tile(Math.ceil(this.player.loc.x / this.tile_size), y_near1).solid
+            || this.get_tile(Math.ceil(this.player.loc.x / this.tile_size), y_near2).solid)
+                this.player.loc.x -= 0.1;
+
+            /* tile bounce */
+
+            var bounce = 0;
+
+            if (left1.solid && left1.bounce > bounce) bounce = left1.bounce;
+            if (left2.solid && left2.bounce > bounce) bounce = left2.bounce;
+            if (right1.solid && right1.bounce > bounce) bounce = right1.bounce;
+            if (right2.solid && right2.bounce > bounce) bounce = right2.bounce;
+
+            this.player.vel.x *= -bounce || 0;
+
+        }
+
+        if (top1.solid || top2.solid || bottom1.solid || bottom2.solid) {
+
+            /* fix overlap */
+
+            while (this.get_tile(x_near1, Math.floor(this.player.loc.y / this.tile_size)).solid
+            || this.get_tile(x_near2, Math.floor(this.player.loc.y / this.tile_size)).solid)
+                this.player.loc.y += 0.1;
+
+            while (this.get_tile(x_near1, Math.ceil(this.player.loc.y / this.tile_size)).solid
+            || this.get_tile(x_near2, Math.ceil(this.player.loc.y / this.tile_size)).solid)
+                this.player.loc.y -= 0.1;
+
+            /* tile bounce */
+
+            var bounce = 0;
+
+            if (top1.solid && top1.bounce > bounce) bounce = top1.bounce;
+            if (top2.solid && top2.bounce > bounce) bounce = top2.bounce;
+            if (bottom1.solid && bottom1.bounce > bounce) bounce = bottom1.bounce;
+            if (bottom2.solid && bottom2.bounce > bounce) bounce = bottom2.bounce;
+
+            this.player.vel.y *= -bounce || 0;
+
+            if ((bottom1.solid || bottom2.solid) && !tile.jump) {
+
+                this.player.on_floor = true;
+                this.player.can_jump = true;
+            }
+
+        }
+
+        // adjust camera
+
+        var c_x = Math.round(this.player.loc.x - this.viewport.x/2);
+        var c_y = Math.round(this.player.loc.y - this.viewport.y/2);
+        var x_dif = Math.abs(c_x - this.camera.x);
+        var y_dif = Math.abs(c_y - this.camera.y);
+
+        if(x_dif > 5) {
+
+            var mag = Math.round(Math.max(1, x_dif * 0.1));
+
+            if(c_x != this.camera.x) {
+
+                this.camera.x += c_x > this.camera.x ? mag : -mag;
+
+                if(this.limit_viewport) {
+
+                    this.camera.x =
+                        Math.min(
+                            this.current_map.width_p - this.viewport.x + this.tile_size,
+                            this.camera.x
+                        );
+
+                    this.camera.x =
+                        Math.max(
+                            0,
+                            this.camera.x
+                        );
+                }
+            }
+        }
+
+        if(y_dif > 5) {
+
+            var mag = Math.round(Math.max(1, y_dif * 0.1));
+
+            if(c_y != this.camera.y) {
+
+                this.camera.y += c_y > this.camera.y ? mag : -mag;
+
+                if(this.limit_viewport) {
+
+                    this.camera.y =
+                        Math.min(
+                            this.current_map.height_p - this.viewport.y + this.tile_size,
+                            this.camera.y
+                        );
+
+                    this.camera.y =
+                        Math.max(
+                            0,
+                            this.camera.y
+                        );
+                }
+            }
+        }
+
+        if(this.last_tile != tile.id && tile.script) {
+
+            eval(this.current_map.scripts[tile.script]);
+        }
+
+        this.last_tile = tile.id;
+    };
+
+    Clarity.prototype.update_player = function () {
+
+        if (this.key.left) {
+
+            if (this.player.vel.x > -this.current_map.vel_limit.x)
+                this.player.vel.x -= this.current_map.movement_speed.left;
+        }
+
+        if (this.key.up) {
+
+            if (this.player.can_jump && this.player.vel.y > -this.current_map.vel_limit.y) {
+
+                this.player.vel.y -= this.current_map.movement_speed.jump;
+                this.player.can_jump = false;
+            }
+        }
+
+        if (this.key.right) {
+
+            if (this.player.vel.x < this.current_map.vel_limit.x)
+                this.player.vel.x += this.current_map.movement_speed.left;
+        }
+
+        this.move_player();
+    };
+
+    Clarity.prototype.draw_player = function (context) {
+
+        context.fillStyle = this.player.colour;
+
+        context.beginPath();
+
+        context.arc(
+            this.player.loc.x + this.tile_size / 2 - this.camera.x,
+            this.player.loc.y + this.tile_size / 2 - this.camera.y,
+            this.tile_size / 2 - 1,
+            0,
+            Math.PI * 2
+        );
+
+        context.fill();
+    };
+
+    Clarity.prototype.update = function () {
+
+        this.update_player();
+    };
+
+    Clarity.prototype.draw = function (context) {
+
+        this.draw_map(context, false);
+        this.draw_player(context);
+    };
+
+    /* Setup of the engine */
+
+    window.requestAnimFrame =
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function(callback) {
+            return window.setTimeout(callback, 1000 / 60);
+        };
+
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d');
+
+    canvas.width = 270;
+    canvas.height = 270;
+
+    var game = new Clarity();
+    game.set_viewport(canvas.width, canvas.height);
+    game.load_map(map);
+
+    /* Limit the viewport to the confines of the map */
+    game.limit_viewport = true;
+
+    var Loop = function() {
+
+        ctx.fillStyle = '#333';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        game.update();
+        game.draw(ctx);
+
+        window.requestAnimFrame(Loop);
+    };
+
+    Loop();
+</script>
+
+</div></article></li><li class="widget span12 widget_tag_cloud"><article class="panel"><header class="panel-header"><h3 class="widget-title">标签云</h3></header><div class="list-box"><a href="https://www.nekomiao.cn/tag/%e8%84%9a%e6%9c%ac" class="tag-cloud-link tag-link-6 tag-link-position-1" style="font-size: 12px;">脚本</a>
+<a href="https://www.nekomiao.cn/tag/mei_you_xie_wan_de_keng" class="tag-cloud-link tag-link-4 tag-link-position-2" style="font-size: 12px;">没有写完的坑</a>
+<a href="https://www.nekomiao.cn/tag/%e6%89%98%e6%8b%89%e5%a7%86%e7%89%a9%e8%af%ad" class="tag-cloud-link tag-link-5 tag-link-position-3" style="font-size: 12px;">托拉姆物语</a></div></article></li><li class="widget span12 widget_recent_comments"><article class="panel"><header class="panel-header"><h3 class="widget-title">评论</h3></header><ul class="sidebar-comments-list show-avatars">						<li>
+							<a href="https://www.nekomiao.cn/post-82.html/comment-page-1#comment-76" title="发表在《Phpstorm 的structure 栏不显示的问题 解决方案》">
+								<img alt='Gravatar 头像' src='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png' srcset='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png 2x' class='avatar avatar-36 photo' height='36' width='36' />								<div class="right-box">
+									<span class="author">emm</span>
+									<p class="comment-text">:mad: 你好</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.nekomiao.cn/post-82.html/comment-page-1#comment-75" title="发表在《Phpstorm 的structure 栏不显示的问题 解决方案》">
+								<img alt='Gravatar 头像' src='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png' srcset='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png 2x' class='avatar avatar-36 photo' height='36' width='36' />								<div class="right-box">
+									<span class="author">emm</span>
+									<p class="comment-text">:?: 提示</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.nekomiao.cn/post-82.html/comment-page-1#comment-74" title="发表在《Phpstorm 的structure 栏不显示的问题 解决方案》">
+								<img alt='Gravatar 头像' src='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/d6e766e67b3b3b1c756342373cc05071.png' srcset='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/d6e766e67b3b3b1c756342373cc05071.png 2x' class='avatar avatar-36 photo' height='36' width='36' />								<div class="right-box">
+									<span class="author">mmp</span>
+									<p class="comment-text">:mad: 测试</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.nekomiao.cn/post-82.html/comment-page-1#comment-73" title="发表在《Phpstorm 的structure 栏不显示的问题 解决方案》">
+								<img alt='Gravatar 头像' src='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png' srcset='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png 2x' class='avatar avatar-36 photo' height='36' width='36' />								<div class="right-box">
+									<span class="author">芽衣子2</span>
+									<p class="comment-text">测试发送</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.nekomiao.cn/post-1.html/comment-page-1#comment-69" title="发表在《世界，您好！》">
+								<img alt='Gravatar 头像' src='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png' srcset='https://www.nekomiao.cn/wp-content/cache/Beginning/avatar/87eb0d6bffe9d250360e620e7ea1cb1b.png 2x' class='avatar avatar-36 photo' height='36' width='36' />								<div class="right-box">
+									<span class="author">芽衣子2</span>
+									<p class="comment-text">测试一下咯</p>
+								</div>
+							</a>
+						</li>
+</ul></article></li><li class="widget span12 widget_calendar"><article class="panel"><header class="panel-header"><h3 class="widget-title">日历呢</h3></header><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>2017年十月</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="星期一">一</th>
+		<th scope="col" title="星期二">二</th>
+		<th scope="col" title="星期三">三</th>
+		<th scope="col" title="星期四">四</th>
+		<th scope="col" title="星期五">五</th>
+		<th scope="col" title="星期六">六</th>
+		<th scope="col" title="星期日">日</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://www.nekomiao.cn/post-date/2017/08">&laquo; 8月</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next" class="pad">&nbsp;</td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="6" class="pad">&nbsp;</td><td>1</td>
+	</tr>
+	<tr>
+		<td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td><a href="https://www.nekomiao.cn/post-date/2017/10/08" aria-label="于2017年10月8日上发布的文章">8</a></td>
+	</tr>
+	<tr>
+		<td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td>
+	</tr>
+	<tr>
+		<td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td id="today">21</td><td>22</td>
+	</tr>
+	<tr>
+		<td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td>
+	</tr>
+	<tr>
+		<td>30</td><td>31</td>
+		<td class="pad" colspan="5">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></article></li>	</ul>
+</aside></div>
+</div>
+<footer id="footer">
+    <div class="box-md">
+                    <nav class="menu footer-menu-box" role="navigation" itemscope
+                 itemtype="http://schema.org/SiteNavigationElement">
+                <span class="menu-title"><span
+                            class="dashicons dashicons-menu"></span>页脚菜单</span>
+                <ul id="footer_menu"><li class="current-menu-item""><a href="https://www.nekomiao.cn">首页</a></li><li class=""><a href="https://www.nekomiao.cn/wp-admin/nav-menus.php?action=locations">⊕添加菜单</a></li></ul>            </nav>
+                <p class="footer-left">© 2017 <a href="https://www.nekomiao.cn" title="Neko">Neko</a></p>
+        <p class="footer-right">Power by <a href="http://cn.wordpress.org" rel="external" target="_blank">WordPress</a> | Theme <a href="https://www.bgbk.org" rel="external" target="_blank">Beginning</a></p>
+    </div>
+    		<ul id="mobile-menu">
+			<li class="home current" data-name="home">
+				<a href="https://www.nekomiao.cn">
+					<span class="dashicons dashicons-admin-home"></span>
+					首页				</a>
+			</li>
+			<li class="category" data-name="category">
+				<a href="https://www.nekomiao.cn?mobile_page=category">
+					<span class="dashicons dashicons-category"></span>
+					分类				</a>
+			</li>
+			<li class="search" data-name="search">
+				<a href="https://www.nekomiao.cn/?s">
+					<span class="dashicons dashicons-search"></span>
+					搜索				</a>
+			</li>
+			<li class="about" data-name="about">
+				<a href="https://www.nekomiao.cn?mobile_page=about">
+					<span class="dashicons dashicons-info"></span>
+					关于				</a>
+			</li>
+		</ul>
+	</footer>
+</div>
+    <a href="#" id="return-top" title="返回顶部" data-no-ajax>
+        <span class="dashicons dashicons-arrow-up-alt"></span>
+    </a>
+    <script type='text/javascript' src='https://www.nekomiao.cn/wp-includes/js/comment-reply.min.js?ver=4.8.2'></script>
+<script type='text/javascript' src='https://www.nekomiao.cn/wp-includes/js/wp-embed.min.js?ver=4.8.2'></script>
+</script>
+<script type = "text/javascript"language = "javascript" >
+
+}</script>
+<script type="text/javascript">
+    if (window.console && window.console.log) {
+        console.log('不好！被你发现了！');
+        console.log("%c qwq", "color:red");
+    }
+    function warning() {
+        if (navigator.userAgent.indexOf("MSIE") > 0) {
+            art.dialog.alert('复制成功，若要转载请务必保留原文链接，谢谢合作！');
+        } else {
+            alert("复制成功，若要转载请务必保留原文链接，谢谢合作！");
+        }
+    }
+    document.body.oncopy = function () {
+        warning();
+    }
+</script>
+</body>
+</html>
