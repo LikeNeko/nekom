@@ -22,8 +22,9 @@ function Neko_enqueue_scripts() {
 //    wp_deregister_script('jquery');
 //    wp_register_script('jquery', 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js', false);
 //    wp_enqueue_script('jquery');
-
-//    wp_enqueue_script( 'test',get_template_directory_uri() . '/js/nekomiao.js',['jquery']);
+//    wp_enqueue_style('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.js');
+  //    wp_enqueue_script('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.css');
+   
  }
 add_action( 'wp_enqueue_scripts', 'Neko_enqueue_scripts' );
 

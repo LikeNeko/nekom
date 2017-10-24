@@ -6,7 +6,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<?php wp_head(); ?>
 	</head>
-	<body <?php body_class(); ?>>
+	<body <?php body_class(); ?> >
 		<div id="wrapper">
 			<header id="header">
 				<div class="box-md">
@@ -37,6 +37,7 @@
 				</div>
 				<?php Bing_mobile_header(); ?>
 			</header>
+            <div style="height: 100px"></div>
 			<div class="box-md">
 				<?php Bing_banner_span12( 'header' ); ?>
 				<div class="wrapper-table-box">
