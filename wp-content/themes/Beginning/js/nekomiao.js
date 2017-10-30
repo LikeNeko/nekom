@@ -1,6 +1,6 @@
-( function( $, document, window, args ){
-    $(function() {
-        $('#侧边栏隐藏').bind('click',function () {
+(function ($, document, window, args) {
+    $(function () {
+        $('#侧边栏隐藏').bind('click', function () {
             // 隐藏侧边
             var R = document.getElementById("sidebar");
             var L = document.getElementById("container");
@@ -14,47 +14,32 @@
             }
 
         })
-        $("body").contextMenu({
-            width: 110, // width
-            itemHeight: 30, // 菜单项height
-            bgColor: "#333", // 背景颜色
-            color: "#fff", // 字体颜色
-            fontSize: 12, // 字体大小
-            hoverColor: "#fff", // hover字体颜色
-            hoverBgColor: "#99CC66", // hover背景颜色
-            target: function(ele) { // 当前元素--jq对象
-                console.log(ele);
-            },
-            menu: [{ // 菜单项
-                text: "新增",
-                icon: "img/1.png",
-                callback: function() {
-                    alert("新增");
-                }
-            },
-                {
-                    text: "复制",
-                    icon: "img/2.png",
-                    callback: function() {
-                        alert("复制");
-                    }
-                },
-                {
-                    text: "粘贴",
-                    icon: "img/3.png",
-                    callback: function() {
-                        alert("粘贴");
-                    }
-                },
-                {
-                    text: "删除",
-                    icon: "img/4.png",
-                    callback: function() {
-                        alert("删除");
-                    }
-                }
-            ]
 
-        });
+        var now = new Date();
+        var KeepTime = setInterval(function () {
+            var grt = new Date("08/23/2017 00:00:00");
+            /*此处修改你的建站时间或者网站上线时间*/
+            now.setTime(now.getTime() + 250);
+            days = (now - grt ) / 1000 / 60 / 60 / 24;
+            dnum = Math.floor(days);
+            hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+            hnum = Math.floor(hours);
+            if (String(hnum).length == 1) {
+                hnum = "0" + hnum;
+            }
+            minutes = (now - grt ) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+            mnum = Math.floor(minutes);
+            if (String(mnum).length == 1) {
+                mnum = "0" + mnum;
+            }
+            seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+            snum = Math.round(seconds);
+            if (String(snum).length == 1) {
+                snum = "0" + snum;
+            }
+            document.getElementById("timeDate").innerHTML = " "+ dnum + "天 ";
+            document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+        }, 250);
+
     });
-} )( jQuery, document, window, theme_base_args );
+})(jQuery, document, window, theme_base_args);

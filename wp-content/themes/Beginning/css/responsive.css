@@ -52,6 +52,9 @@
 	body {
 		background: #FFF !important;
 	}
+	#placeholder{
+		height: 0px;
+	}
 
 	.pc-hide {
 		display: block;
@@ -98,7 +101,6 @@
 		background: transparent;
 		margin: -10px -10px 0;
 
-		border-bottom: 1px solid #e2e1e1;
 	}
 
 	.panel .panel-header h1,

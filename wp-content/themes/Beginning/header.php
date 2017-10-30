@@ -7,6 +7,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> >
+    <!--wp-compress-html-->
 		<div id="wrapper">
 			<header id="header">
 				<div class="box-md">
@@ -37,7 +38,7 @@
 				</div>
 				<?php Bing_mobile_header(); ?>
 			</header>
-            <div style="height: 100px"></div>
+            <div id="placeholder"></div>
 			<div class="box-md">
 				<?php Bing_banner_span12( 'header' ); ?>
 				<div class="wrapper-table-box">

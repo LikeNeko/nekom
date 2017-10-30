@@ -3,7 +3,7 @@
  * 自定义登陆界面
  */
 function custom_login_logo() {
-echo '
+    echo '
 <link rel="stylesheet" id="wp-admin-css" href="'.get_bloginfo('template_directory').'/css/xinadmin.css"
       type="text/css"/>';
 }
@@ -23,9 +23,10 @@ function Neko_enqueue_scripts() {
 //    wp_register_script('jquery', 'https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js', false);
 //    wp_enqueue_script('jquery');
 //    wp_enqueue_style('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.js');
-  //    wp_enqueue_script('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.css');
-   
- }
+    //    wp_enqueue_script('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.css');
+    wp_enqueue_script( 'nekomiao', get_template_directory_uri() . '/js/nekomiao.js', ['jquery'], THEME_DB_VERSION );
+
+}
 add_action( 'wp_enqueue_scripts', 'Neko_enqueue_scripts' );
 
 
@@ -40,31 +41,36 @@ add_action( 'wp_default_scripts', function( $scripts ) {
     }
 } );
 
-/**
- * 加入文章目录
- *
- */
-function article_index($content) {
-    $matches = array();
-    $ul_li = '';
+//压缩html代码
+function wp_compress_html(){
+    function wp_compress_html_main ($buffer){
+        $initial=strlen($buffer);
+        $buffer=explode("<!--wp-compress-html-->", $buffer);
+        $count=count ($buffer);
+        $buffer_out ='';
 
-    $r = '/<h([2-6]).*?\>(.*?)<\/h[2-6]>/is';
-
-    if(is_single() && preg_match_all($r, $content, $matches)) {
-        foreach($matches[1] as $key => $value) {
-            $title = trim(strip_tags($matches[2][$key]));
-            $content = str_replace($matches[0][$key], '<h' . $value . ' id="title-' . $key . '">'.$title.'</h2>', $content);
-            $ul_li .= '<li><a href="#title-'.$key.'" title="'.$title.'">'.$title."</a></li>\n";
+        for ($i = 0; $i <= $count; $i++){
+            if (stristr($buffer[$i], '<!--wp-compress-html no compression-->')) {
+                $buffer[$i]=(str_replace("<!--wp-compress-html no compression-->", " ", $buffer[$i]));
+            } else {
+                $buffer[$i]=(str_replace("\t", " ", $buffer[$i]));
+                $buffer[$i]=(str_replace("\n\n", "\n", $buffer[$i]));
+                $buffer[$i]=(str_replace("\n", "", $buffer[$i]));
+                $buffer[$i]=(str_replace("\r", "", $buffer[$i]));
+                while (stristr($buffer[$i], '  ')) {
+                    $buffer[$i]=(str_replace("  ", " ", $buffer[$i]));
+                }
+            }
+            $buffer_out.=$buffer[$i];
         }
-
-        $content = "\n<div id=\"article-index\">
-<strong>文章目录</strong>
-<ol id=\"index-ul\">\n" . $ul_li . "</ol>
-</div>\n" . $content;
+        $final=strlen($buffer_out);
+        $savings=($initial-$final)/$initial*100;
+        $savings=round($savings, 2);
+        $buffer_out.="\n<!--压缩前的大小: $initial bytes; 压缩后的大小: $final bytes; 节约：$savings% -->";
+        return $buffer_out;
     }
-
-    return $content;
+    ob_start("wp_compress_html_main");
 }
-add_filter( 'the_content', 'article_index' );
+add_action('get_header', 'wp_compress_html');
 
 //End of page.

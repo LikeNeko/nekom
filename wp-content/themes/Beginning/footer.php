@@ -26,24 +26,22 @@ endif;
 wp_footer();
 ?>
 </script>
-<script type = "text/javascript"language = "javascript" >
 
-}</script>
 <script type="text/javascript">
     if (window.console && window.console.log) {
-        console.log('不好！被你发现了！');
-        console.log("%c qwq", "color:red");
+        console.log("%c Neko  %c","background:#24272A; color:#ffffff","","喵?被两脚兽发现惹！Σ( ° △ °|||)︴ ");
     }
     function warning() {
         if (navigator.userAgent.indexOf("MSIE") > 0) {
-            art.dialog.alert('复制成功，若要转载请务必保留原文链接，谢谢合作！');
+            art.dialog.alert('复制成功，若要转载请务必保留原文链接，谢谢合作喵！(ps：点确认才算复制成功喵！');
         } else {
-            alert("复制成功，若要转载请务必保留原文链接，谢谢合作！");
+            alert("复制成功，若要转载请务必保留原文链接，谢谢合作喵！(ps：点确认才算复制成功喵！");
         }
     }
     document.body.oncopy = function () {
         warning();
     }
 </script>
+<!--wp-compress-html-->
 </body>
 </html>

@@ -57,6 +57,12 @@ body,
    -webkit-border-radius:0;
 }
 
+/* placeholder 占位*/
+#placeholder{
+	height: 100px;
+}
+ */
+ */
 html,
 body {
 	min-height: 100%;
@@ -1267,7 +1273,7 @@ select:hover {
 }
 
 .context img {
-	max-width: 100%;
+	max-width: 90%;
 	height: auto;
 	border: 1px solid #E6E6EB;
 	margin-bottom: 10px;
