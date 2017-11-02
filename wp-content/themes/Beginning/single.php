@@ -10,9 +10,9 @@
 							if ( Bing_mpanel( 'breadcrumbs' ) )
 								Bing_Breadcrumbs::output();
 
-							Bing_post_meta( array( 'author', 'date-abb', 'comments', 'tags' ) );
+							Bing_post_meta( array( 'author', 'date-abb', 'comments', 'tags','r-hide' ) );
 							?>
-						</div>
+                        </div>
 						<?php
 						the_title( '<' . Bing_get_page_title_tag() . ' class="post-title">', '</' . Bing_get_page_title_tag() . '>' );
 						edit_post_link( '<span class="dashicons dashicons-edit"></span>' . __( '编辑', 'Bing' ), '<span class="right">', '</span>' );

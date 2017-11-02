@@ -1,20 +1,21 @@
 (function ($, document, window, args) {
     $(function () {
-        $('#侧边栏隐藏').bind('click', function () {
-            /* 隐藏侧边 */
-            var R = document.getElementById("sidebar");
-            var L = document.getElementById("container");
 
-            if (L.className == "container") {
-                $("#sidebar").hide("slow");
-                L.className = "";
-            } else {
-                $("#sidebar").show("slow");
-                L.className = "container";
+        // 隐藏侧边
+        $('#s-hide').on('click',function () {
+            var R=$("#sidebar");
+            if (R.attr('class')=="r-hide")
+            {
+                R.attr("class",'')
+                $("#s-hide").html( '隐藏侧边')
+                R.show('slow');
+            }else if(R.attr('class')=="")
+            {
+                R.attr("class",'r-hide')
+                $("#s-hide").html( '显示侧边')
+                R.hide("slow");
             }
-
         })
-
         var now = new Date();
         var KeepTime = setInterval(function () {
             var grt = new Date("08/23/2017 00:00:00");

@@ -1,4 +1,4 @@
-<aside id="sidebar" itemscope itemtype="http://schema.org/WPSideBar">
+<aside id="sidebar" itemscope itemtype="http://schema.org/WPSideBar" class="">
 	<ul class="row">
 		<?php if( !dynamic_sidebar( Bing_current_sidebar() ) ): ?>
 			<li class="span12 empty-sidebar">
