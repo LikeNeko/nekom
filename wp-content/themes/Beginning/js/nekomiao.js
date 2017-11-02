@@ -1,7 +1,7 @@
 (function ($, document, window, args) {
     $(function () {
         $('#侧边栏隐藏').bind('click', function () {
-            // 隐藏侧边
+            /* 隐藏侧边 */
             var R = document.getElementById("sidebar");
             var L = document.getElementById("container");
 
@@ -18,7 +18,7 @@
         var now = new Date();
         var KeepTime = setInterval(function () {
             var grt = new Date("08/23/2017 00:00:00");
-            /*此处修改你的建站时间或者网站上线时间*/
+            /* 此处修改你的建站时间或者网站上线时间 */
             now.setTime(now.getTime() + 250);
             days = (now - grt ) / 1000 / 60 / 60 / 24;
             dnum = Math.floor(days);
@@ -40,6 +40,24 @@
             document.getElementById("timeDate").innerHTML = " "+ dnum + "天 ";
             document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
         }, 250);
+
+        /* 增加页面离开修改title */
+        var OriginTitile = document.title;
+        var titleTime;
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
+
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
+                titleTime = setTimeout(function() {
+                    document.title = OriginTitile;
+                }, 2000);
+            }
+        });
+
 
     });
 })(jQuery, document, window, theme_base_args);

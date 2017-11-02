@@ -61,8 +61,9 @@ body,
 #placeholder{
 	height: 100px;
 }
- */
- */
+
+
+
 html,
 body {
 	min-height: 100%;
@@ -71,7 +72,8 @@ body {
 
 body {
 	color: #333;
-	font: 12px/24px Hiragino Sans GB, Microsoft Yahei, SimSun, Helvetica, Arial, Sans-serif;
+	font: 12px/24px Hiragino Sans GB, Microsoft Yahei, SimSun, Helvetica, Arial,"宋体" , Sans-serif;
+
 	background: #F0F0F5;
 }
 
@@ -1244,7 +1246,7 @@ select:hover {
 	line-height: 40px;
 	margin: 0 -15px 10px;
 	padding: 0 15px;
-	border-bottom: none;
+	border-bottom: 1px solid #eee;
 	background: #FAFAFA;
 }
 

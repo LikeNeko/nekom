@@ -211,9 +211,12 @@ function Bing_enqueue_scripts() {
 	// Style
 	wp_enqueue_style( 'theme-style', get_stylesheet_uri(), array( 'dashicons'), THEME_DB_VERSION );
 
+
 	// Base
 	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.js', array( 'jquery' ), THEME_DB_VERSION );
-	wp_localize_script( 'theme-base', 'theme_base_args', array(
+    
+
+    wp_localize_script( 'theme-base', 'theme_base_args', array(
 		'admin_ajax'      => admin_url( 'admin-ajax.php' ),
 		'ajax_comment'    => Bing_mpanel( 'ajax_comment' ),
 		'comment_loading' => __( '正在提交...', 'Bing' ),
