@@ -18,9 +18,10 @@
 </footer>
 </div>
 <?php if ( Bing_mpanel( 'return_top' ) ): ?>
-    <a href="#" id="return-top" title="<?php esc_attr_e( '返回顶部', 'Bing' ); ?>" data-no-ajax>
-        <span class="dashicons dashicons-arrow-up-alt"></span>
-    </a>
+<!--    <a href="#" id="return-top" title="--><?php //esc_attr_e( '返回顶部', 'Bing' ); ?><!--" data-no-ajax>-->
+<!--        <span class="dashicons dashicons-arrow-up-alt"></span>-->
+<!--    </a>-->
+    <a href="#" class="cd-top"  data-no-ajax></a>
     <?php
 endif;
 wp_footer();

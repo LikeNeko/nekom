@@ -56,7 +56,8 @@
                 }, 2000);
             }
         });
-
-       
+        /* 设置特效 */
+        $('.posts-list').css("margin-top",0)
+        $('.widget_posts_list').css('margin-top',0)
     });
 })(jQuery, document, window, theme_base_args);
