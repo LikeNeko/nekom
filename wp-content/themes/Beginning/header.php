@@ -15,6 +15,7 @@
 		<div id="wrapper">
 			<header id="header">
 				<div class="box-md">
+                    <div id="logo_before">
 					<?php if ( is_home() || Bing_mpanel( 'headings_tags_downgrade' ) ) : ?>
 						<h1 class="logo">
 							<a href="<?php echo esc_url( home_url() ) ?>" title="<?php echo esc_attr( sprintf( '%s | %s', get_bloginfo( 'name', 'display' ), get_bloginfo( 'description', 'display' ) ) ); ?>"><?php bloginfo( 'name' ); ?></a>
@@ -24,6 +25,7 @@
 							<a href="<?php echo esc_url( home_url() ) ?>" title="<?php echo esc_attr( sprintf( '%s | %s', get_bloginfo( 'name', 'display' ), get_bloginfo( 'description', 'display' ) ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 						</div>
 					<?php endif; ?>
+                    </div>
 					<nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php echo Bing_nav_menu( 'header_menu' ); ?>
 					</nav>
