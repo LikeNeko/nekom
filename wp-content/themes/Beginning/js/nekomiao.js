@@ -2,17 +2,15 @@
     $(function () {
 
         // 隐藏侧边
-        $('#s-hide').on('click',function () {
-            var R=$("#sidebar");
-            if (R.attr('class')=="r-hide")
-            {
-                R.attr("class",'')
-                $("#s-hide").html( '隐藏侧边')
+        $('#s-hide').on('click', function () {
+            var R = $("#sidebar");
+            if (R.attr('class') == "r-hide") {
+                R.attr("class", '')
+                $("#s-hide").html('隐藏侧边')
                 R.show('slow');
-            }else if(R.attr('class')=="")
-            {
-                R.attr("class",'r-hide')
-                $("#s-hide").html( '显示侧边')
+            } else if (R.attr('class') == "") {
+                R.attr("class", 'r-hide')
+                $("#s-hide").html('显示侧边')
                 R.hide("slow");
             }
         })
@@ -38,14 +36,14 @@
             if (String(snum).length == 1) {
                 snum = "0" + snum;
             }
-            document.getElementById("timeDate").innerHTML = " "+ dnum + "天 ";
+            document.getElementById("timeDate").innerHTML = " " + dnum + "天 ";
             document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
         }, 250);
 
         /* 增加页面离开修改title */
         var OriginTitile = document.title;
         var titleTime;
-        document.addEventListener('visibilitychange', function() {
+        document.addEventListener('visibilitychange', function () {
             if (document.hidden) {
                 document.title = '(つェ⊂)我藏好了哦~ ' + OriginTitile;
 
@@ -53,12 +51,12 @@
             }
             else {
                 document.title = '(*´∇｀*) 被你发现啦~ ' + OriginTitile;
-                titleTime = setTimeout(function() {
+                titleTime = setTimeout(function () {
                     document.title = OriginTitile;
                 }, 2000);
             }
         });
 
-
+       
     });
 })(jQuery, document, window, theme_base_args);
