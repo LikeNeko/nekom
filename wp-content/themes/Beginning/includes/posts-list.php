@@ -212,6 +212,7 @@ if ( !function_exists('Bing_post_meta') ) :
                 case 'r-hide' :
                     ?>
                     <li class="r-hide">
+                        <span class="dashicons dashicons-editor-code"></span>
                         <a id="s-hide" href="javascript:;" class="">隐藏边栏</a>
                     </li>
                     <?php

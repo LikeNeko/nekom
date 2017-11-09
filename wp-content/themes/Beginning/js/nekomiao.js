@@ -2,7 +2,7 @@
     $(function () {
 
         // 隐藏侧边
-        $('#s-hide').on('click', function () {
+        $(document).on('click','.r-hide',function(){
             var R = $("#sidebar");
             if (R.attr('class') == "r-hide") {
                 R.attr("class", '')

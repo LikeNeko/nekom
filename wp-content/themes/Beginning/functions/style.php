@@ -243,6 +243,7 @@ add_action( 'css', 'Bing_logo_style' );
 function Bing_first_line_indent_style(){
 	if( Bing_mpanel( 'first_line_indent' ) )
 		Bing_print_css( '#post-box.type-post .context p', array( 'text-indent' => '2em' ) );
+
 }
 add_action( 'css', 'Bing_first_line_indent_style' );
 

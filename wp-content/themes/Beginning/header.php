@@ -40,6 +40,7 @@
 							<a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="<?php esc_attr_e( '刷新', 'Bing' ); ?>"></a>
 						</li>
 					</ul>
+
 					<?php get_search_form(); ?>
 				</div>
 				<?php Bing_mobile_header(); ?>
