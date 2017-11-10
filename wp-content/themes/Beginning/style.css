@@ -1135,7 +1135,8 @@ select:hover {
 	border-width: 0 5px 0;
 	background: #FAFAFA;
 	margin: 0 -5px -1px;
-	font-size: 18px;
+	/*font-size: 18px;*/
+	font-size: x-large;
 }
 
 #post-box.type-post .post-title:before {
@@ -1250,6 +1251,7 @@ select:hover {
 .context p {
 	line-height: 28px;
 	margin-bottom: 10px;
+	text-indent: 2em;
 }
 
 .context a {
@@ -1412,29 +1414,6 @@ select:hover {
 	list-style-type: decimal;
 }
 
-.context table {
-	width: 100%;
-	margin-bottom: 10px;
-	border: 1px solid #E6E6EB;
-}
-
-.context table tr:nth-child( odd ) {
-	background: #FAFAFA;
-}
-
-.context table tr:last-child td {
-	border-bottom: none;
-}
-
-.context table tr td {
-	border: solid #E6E6EB;
-	border-width: 0 1px 1px 0;
-	padding: 4px 8px;
-}
-
-.context table tr td:last-child {
-	border-right: none;
-}
 
 .context pre {
 	font: inherit;

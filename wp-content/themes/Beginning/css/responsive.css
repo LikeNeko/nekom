@@ -16,6 +16,7 @@
 	#post-box .post-title {
 		border: none;
 		margin: 0 0 -1px;
+		font-size: x-large;
 	}
 
 }
@@ -88,8 +89,10 @@
 	.panel {
 		margin-bottom: 0;
 		padding: 10px;
-		box-shadow: 0 0 2px #2d6dcc;
-		-moz-box-shadow: 0 0 2px #2d6dcc;
+		box-shadow:0 0 0 !important;
+	}
+	.panel:hover{
+		box-shadow:0 0 0 !important;
 	}
 
 	.panel.transparent {

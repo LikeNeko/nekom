@@ -83,10 +83,12 @@ function wp_compress_html()
 add_action( 'get_header', 'wp_compress_html' );
 
 
+/**
+ * @desc 隐藏后台登陆入口
+ */
 function login_protection()
 {
     if ( $_GET["入口"] != "芝麻开门" ) header( "Location: https://". $_SERVER["HTTP_HOST"]  );
 }
 
 add_action( "login_enqueue_scripts", "login_protection" );
-
