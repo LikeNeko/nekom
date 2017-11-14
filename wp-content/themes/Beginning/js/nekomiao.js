@@ -57,6 +57,12 @@
             }
         });
 
+        /**
+         * 缓存成应用
+         */
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js');
+        };
 
     });
 })(jQuery, document, window, theme_base_args);

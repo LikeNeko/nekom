@@ -18,7 +18,7 @@
  *
  */
 
-function latex_markup( $content ) {
+function latex_markup_editormd( $content ) {
 	$textarr = wp_html_split( $content );
 	
 	$regex = '%
@@ -40,27 +40,27 @@ function latex_markup( $content ) {
 			continue;
 		}
 
-		$element = preg_replace_callback( $regex, 'latex_src', $element );
+		$element = preg_replace_callback( $regex, 'latex_src_editormd', $element );
 	}
 
 	return implode( '', $textarr );
 }
 
-function latex_src( $matches ) {
+function latex_src_editormd( $matches ) {
 	$latex = $matches[1];
 
-	$latex = latex_entity_decode( $latex );
+	$latex = latex_entity_decode_editormd( $latex );
 
-	return latex_render( $latex );
+	return latex_render_editormd( $latex );
 }
 
-function latex_entity_decode( $latex ) {
+function latex_entity_decode_editormd( $latex ) {
 	return str_replace( array( '&lt;', '&gt;', '&quot;', '&#039;', '&#038;', '&amp;', "\n", "\r", "&#92;", "&#40;", "&#41;", "&#95;","&#33;" ), array( '<', '>', '"', "'", '&', '&', ' ', ' ', '\\\\', '(', ')', '_', '!' ), $latex );
 }
 
-function latex_render( $latex ) {
+function latex_render_editormd( $latex ) {
 	return '<script type="text/javascript">document.write(katex.renderToString("'.$latex.'"));</script>';
 }
 
-add_filter( 'the_content', 'latex_markup', 9 ); // before wptexturize
-add_filter( 'comment_text', 'latex_markup', 9 ); // before wptexturize
+add_filter( 'the_content', 'latex_markup_editormd', 9 ); // before wptexturize
+add_filter( 'comment_text', 'latex_markup_editormd', 9 ); // before wptexturize

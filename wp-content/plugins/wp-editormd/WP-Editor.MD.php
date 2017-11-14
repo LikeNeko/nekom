@@ -3,13 +3,14 @@
  * Plugin Name: WP Editor.md
  * Plugin URI: https://iiong.com/wordpress-plugins-wp-editormd.html
  * Description: 或许这是一个WordPress中最好，最完美的Markdown编辑器。
- * Version: 3.4
+ * Version: 3.5
  * Author: 淮城一只猫
  * Author URI: https://iiong.com/
  * License: GPLv3 or later
  */
+if(is_admin()){
 
-define( 'WP_EDITORMD_PLUGIN_VERSION', '3.4' ); //版本说明
+define( 'WP_EDITORMD_PLUGIN_VERSION', '3.5' ); //版本说明
 define( 'WP_EDITORMD_PLUGIN_URL', plugins_url( '', __FILE__ ) ); //插件资源路径
 define( 'WP_EDITORMD_PLUGIN_PATH', dirname( __FILE__ ) ); //插件路径文件夹
 
@@ -40,7 +41,7 @@ if ( isset( $options['task_list'] ) && $options['task_list'] == 1 ) {
 
 //引入jetpack LaTeX库
 if ( isset( $options['support_katex'] ) && $options['support_katex'] == 1 ) {
-	if ( ! function_exists( 'latex_markup' ) ) {
+	if ( ! function_exists( 'latex_markup_editormd' ) ) {
 		require WP_EDITORMD_PLUGIN_PATH . '/Jetpack/latex/latex.php';
 	}
 }
@@ -83,19 +84,18 @@ if ( ! class_exists( 'editormd' ) ) {
 //引入设置页面
 require WP_EDITORMD_PLUGIN_PATH . '/editormd_options.php';
 
-//引入通知页面
-require WP_EDITORMD_PLUGIN_PATH . '/editormd_info.php';
-
 //文章
 add_action( 'edit_form_advanced', array( $editormd, 'add_admin_style' ) );
 add_action( 'edit_form_advanced', array( $editormd, 'add_admin_js' ) );
 add_action( 'edit_form_advanced', array( $editormd, 'add_admin_head' ) );
 add_action( 'edit_form_advanced', array( $editormd, 'post_load_editormd' ) );
+add_action( 'edit_form_advanced', array( $editormd, 'mobile_code_javascript' ) );
 //页面
 add_action( 'edit_page_form', array( $editormd, 'add_admin_style' ) );
 add_action( 'edit_page_form', array( $editormd, 'add_admin_js' ) );
 add_action( 'edit_page_form', array( $editormd, 'add_admin_head' ) );
 add_action( 'edit_page_form', array( $editormd, 'post_load_editormd' ) );
+add_action( 'edit_page_form', array( $editormd, 'mobile_code_javascript' ) );
 
 add_filter( 'pre_option_' . WP_Editormd_Markdown::POST_OPTION, '__return_true' );
 add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), array(
@@ -152,3 +152,4 @@ if ( isset( $options['support_emoji'] ) && $options['support_emoji'] == 1 ) {
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 };
+}

@@ -16,7 +16,7 @@ require( get_template_directory() . '/theme-config.php' );
 // Functions
 require( get_template_directory() . '/functions/compat.php' );
 require( get_template_directory() . '/functions/theme-functions.php' );
-require( get_template_directory() . '/functions/update.php' );
+//require( get_template_directory() . '/functions/update.php' );
 require( get_template_directory() . '/functions/nav-menu.php' );
 require( get_template_directory() . '/functions/thumbnail.php' );
 require( get_template_directory() . '/functions/widgets.php' );

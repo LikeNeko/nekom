@@ -93,13 +93,86 @@ function login_protection()
 
 add_action( "login_enqueue_scripts", "login_protection" );
 
-//说说
+/**
+ * 说
+ */
 add_action('init', 'my_custom_init');
 function my_custom_init()
 {
-    $labels = array('name' => '说说', 'singular_name' => 'singularname', 'add_new' => '发表说说', 'add_new_item' => '发表说说', 'edit_item' => '编辑说说', 'new_item' => '新说说', 'view_item' => '查看说说', 'search_items' => '搜索说说', 'not_found' => '暂无说说', 'not_found_in_trash' => '没有已遗弃的说说', 'parent_item_colon' => '', 'menu_name' => '说说');
-    $args = array('labels' => $labels, 'public' => true, 'publicly_queryable' => true, 'show_ui' => true, 'show_in_menu' => true, 'query_var' => true, 'rewrite' => true, 'capability_type' => 'post', 'has_archive' => true, 'hierarchical' => false, 'menu_position' => null, 'supports' => array('title', 'editor', 'author'));
+    $labels = array(
+        'name'               => '说说',
+        'singular_name'      => '发布说说',
+        'add_new'            => '发表说说',
+        'add_new_item'       => '发表说说',
+        'edit_item'          => '编辑说说',
+        'new_item'           => '新说说',
+        'view_item'          => '查看说说',
+        'search_items'       => '搜索说说',
+        'not_found'          => '暂无说说',
+        'not_found_in_trash' => '没有已遗弃的说说',
+        'parent_item_colon'  => '',
+        'menu_name'          => '说说'
+    );
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite'            => true,
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => false,
+        'menu_position'      => null,
+        'supports'           => array('title', 'editor', 'author')
+    );
     register_post_type('shuoshuo', $args);
+}
+
+//Add dashboard widgets
+if ( ! function_exists( 'add_dashboard_widgets' ) ) :
+    function welcome_dashboard_widget_function() {
+        echo "<ul><li><a href='post-new.php'>发布内容</a></li><li><a href='edit.php'>修改内容</a></li></ul>";
+    }
+    function add_dashboard_widgets() {
+        wp_add_dashboard_widget('welcome_dashboard_widget', '常规任务', 'welcome_dashboard_widget_function');
+    }
+    add_action('wp_dashboard_setup', 'add_dashboard_widgets' );
+endif;
+
+/**
+ * 仪表盘[活动]小工具输出自定义文章类型
+ * https://gist.github.com/Mte90/708e54b21b1f7372b48a
+ */
+if ( is_admin() ) {
+    add_filter( 'dashboard_recent_posts_query_args', 'wpdx_add_cpt_to_dashboard_activity' );
+    function wpdx_add_cpt_to_dashboard_activity( $query ) {
+// 如果你要显示所有文章类型，就删除下行的 //，并在 11 行前面添加 //
+// $post_types = get_post_types();
+// 如果你仅仅希望显示指定的文章类型，可以修改下行的数组内容，并确保上行前面添加 //
+        $post_types = ['post', 'download'];
+        if ( is_array( $query['post_type'] ) ) {
+            $query['post_type'] = $post_types;
+        } else {
+            $temp = $post_types;
+            $query['post_type'] = $temp;
+        }
+        return $query;
+    }
+}
+
+/**
+ * 提高搜索结果相关性
+ */
+if(is_search()){
+    add_filter('posts_orderby_request', 'search_orderby_filter');
+}
+function search_orderby_filter($orderby = ''){
+    global $wpdb;
+    $keyword = $wpdb->prepare($_REQUEST['s']);
+    return "((CASE WHEN {$wpdb->posts}.post_title LIKE '%{$keyword}%' THEN 2 ELSE 0 END) + (CASE WHEN {$wpdb->posts}.post_content LIKE '%{$keyword}%' THEN 1 ELSE 0 END)) DESC,
+{$wpdb->posts}.post_modified DESC, {$wpdb->posts}.ID ASC";
 }
 
 

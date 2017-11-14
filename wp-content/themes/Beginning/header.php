@@ -5,13 +5,13 @@
 		<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>" />
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="shortcut icon" href=" /favicon.ico" />
+        <meta name="keywords"  content="wordpress 猫窝博客" />
+
+        <meta name="theme-color" content="#f0f0f5"/>
         <?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> >
     <!--wp-compress-html-->
-<!--    <a style="width:149px;height:149px;position:fixed;top:0;right:0;z-index:9999;" href="" target="_blank">-->
-<!--        <img src="https://chokcoco.github.io/demo/curveJS/images/forkme.png">-->
-<!--    </a>-->
 		<div id="wrapper">
 			<header id="header">
 				<div class="box-md">

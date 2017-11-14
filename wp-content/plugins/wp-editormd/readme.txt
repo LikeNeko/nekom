@@ -1,10 +1,10 @@
-﻿=== WP Editor.MD ===
+=== WP Editor.MD ===
 Contributors: 淮城一只猫
 Donate link: https://iiong.com/
 Tags: Edit,Markdown,Markdown Edit,Jetpack
 Requires at least: 3.4
-Tested up to: 4.8.2
-Stable tag: 3.4
+Tested up to: 4.9
+Stable tag: 3.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -87,6 +87,10 @@ Empty content is the default highlight library, Go to [highlightjs] (https://hig
 3. Editor.md Interface - Full Screen Mode
 
 == Changelog ==
+
+= 3.5 =
+
+* 修复一些问题
 
 = 3.4 =
 

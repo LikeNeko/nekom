@@ -32,7 +32,19 @@
 					</section>
 				</div>
 			</article>
-			<?php
+            <!– 转载声明开始 –>
+            <blockquote>
+                <center><font color=gray size=-1>
+                        本文由 [<strong><?php the_author_posts_link(); ?></strong>]
+                        原创，转载请注明转自：<strong><?php bloginfo('name'); ?></strong>[<a
+                                href="<?php echo get_settings('home'); ?>"><?php echo get_settings('home'); ?></a>]；<br>
+                        本文链接：<a href="<?php the_permalink() ?>"
+                                title="<?php the_title(); ?>"><?php the_permalink(); ?></a>
+                    </font></center>
+            </blockquote>
+            <!– 转载声明结束 –>
+
+            <?php
 			Bing_banner_post_bottom();
 
 			if( Bing_mpanel( 'related_posts' ) && get_post_type() == 'post' )

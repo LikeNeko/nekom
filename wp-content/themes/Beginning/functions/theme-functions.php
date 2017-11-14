@@ -69,7 +69,7 @@ function Bing_theme_objects_init() {
 	Bing_mpanel();
 
 	// 初始化主题更新
-	Bing_Theme_Update::init();
+//	Bing_Theme_Update::init();
 
 	// 初始化垃圾评论防御
 	add_action( 'init', array( 'Bing_Anti_Spam', 'init' ) );
@@ -213,7 +213,7 @@ function Bing_enqueue_scripts() {
 
 
 	// Base
-	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.js', array( 'jquery' ), THEME_DB_VERSION );
+	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.min.js', array( 'jquery' ), THEME_DB_VERSION );
     
 
     wp_localize_script( 'theme-base', 'theme_base_args', array(
