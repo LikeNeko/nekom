@@ -130,7 +130,11 @@ function my_custom_init()
     register_post_type('shuoshuo', $args);
 }
 
-//Add dashboard widgets
+/**
+ * Add dashboard widgets没什么卵用待开发的东西
+ *
+ */
+
 if ( ! function_exists( 'add_dashboard_widgets' ) ) :
     function welcome_dashboard_widget_function() {
         echo "<ul><li><a href='post-new.php'>发布内容</a></li><li><a href='edit.php'>修改内容</a></li></ul>";
@@ -141,26 +145,6 @@ if ( ! function_exists( 'add_dashboard_widgets' ) ) :
     add_action('wp_dashboard_setup', 'add_dashboard_widgets' );
 endif;
 
-/**
- * 仪表盘[活动]小工具输出自定义文章类型
- * https://gist.github.com/Mte90/708e54b21b1f7372b48a
- */
-if ( is_admin() ) {
-    add_filter( 'dashboard_recent_posts_query_args', 'wpdx_add_cpt_to_dashboard_activity' );
-    function wpdx_add_cpt_to_dashboard_activity( $query ) {
-// 如果你要显示所有文章类型，就删除下行的 //，并在 11 行前面添加 //
-// $post_types = get_post_types();
-// 如果你仅仅希望显示指定的文章类型，可以修改下行的数组内容，并确保上行前面添加 //
-        $post_types = ['post', 'download'];
-        if ( is_array( $query['post_type'] ) ) {
-            $query['post_type'] = $post_types;
-        } else {
-            $temp = $post_types;
-            $query['post_type'] = $temp;
-        }
-        return $query;
-    }
-}
 
 /**
  * 提高搜索结果相关性
@@ -174,5 +158,6 @@ function search_orderby_filter($orderby = ''){
     return "((CASE WHEN {$wpdb->posts}.post_title LIKE '%{$keyword}%' THEN 2 ELSE 0 END) + (CASE WHEN {$wpdb->posts}.post_content LIKE '%{$keyword}%' THEN 1 ELSE 0 END)) DESC,
 {$wpdb->posts}.post_modified DESC, {$wpdb->posts}.ID ASC";
 }
+
 
 

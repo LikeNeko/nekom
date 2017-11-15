@@ -33,7 +33,7 @@
 				</div>
 			</article>
             <!– 转载声明开始 –>
-            <blockquote>
+            <blockquote class="copyright_single">
                 <center><font color=gray size=-1>
                         本文由 [<strong><?php the_author_posts_link(); ?></strong>]
                         原创，转载请注明转自：<strong><?php bloginfo('name'); ?></strong>[<a
