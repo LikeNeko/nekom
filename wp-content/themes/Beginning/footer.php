@@ -18,9 +18,7 @@
 </footer>
 </div>
 <?php if ( Bing_mpanel( 'return_top' ) ): ?>
-<!--    <a href="#" id="return-top" title="--><?php //esc_attr_e( '返回顶部', 'Bing' ); ?><!--" data-no-ajax>-->
-<!--        <span class="dashicons dashicons-arrow-up-alt"></span>-->
-<!--    </a>-->
+
     <a href="#" class="cd-top"  data-no-ajax></a>
     <?php
 endif;
@@ -32,16 +30,40 @@ wp_footer();
     if (window.console && window.console.log) {
         console.log("%c Neko  %c","background:#24272A; color:#ffffff","","喵?被两脚兽发现惹！Σ( ° △ °|||)︴ ");
     }
-    function warning() {
-        if (navigator.userAgent.indexOf("MSIE") > 0) {
-            art.dialog.alert('复制成功，若要转载请务必保留原文链接，谢谢合作喵！(ps：点确认才算复制成功喵！');
+    
+    /**
+     * 右键复制追加版权
+     */
+    function addLink() {
+        var body_element = document.body;
+        var selection;
+        selection = window.getSelection();
+        if ( ! window.clipboardData) {
+            var pagelink = "<br><br>——出自[ 猫窝博客 ] ， 转载请保留原文链接: " + document.location.href + "";
+            var copytext = selection + pagelink;
+            var newdiv = document.createElement('div');
+            newdiv.style.position = 'absolute';
+            newdiv.style.left = '-99999px';
+            body_element.appendChild(newdiv);
+            newdiv.innerHTML = copytext;
+            selection.selectAllChildren(newdiv);
+            window.setTimeout(function () {
+                body_element.removeChild(newdiv);
+            }, 0);
+
         } else {
-            alert("复制成功，若要转载请务必保留原文链接，谢谢合作喵！(ps：点确认才算复制成功喵！");
+            /* Internet Explorer*/
+            var pagelink = "\r\n\r\n原文出自[ 猫窝博客 ] 转载请保留原文链接: " + document.location.href + "";
+            var copytext = selection + pagelink;
+            window.clipboardData.setData("Text", copytext);
+            return false;
         }
     }
-    document.body.oncopy = function () {
-        warning();
-    }
+
+    document.oncopy = function () {
+        addLink();
+    };
+
 </script>
 <!--wp-compress-html-->
 </body>

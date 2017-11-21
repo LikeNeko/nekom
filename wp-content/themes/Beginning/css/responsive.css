@@ -56,6 +56,23 @@
 	#placeholder{
 		height: 0px;
 	}
+	/*缩略图修改悬浮*/
+	.posts-list>li .thumbnail-link::before{
+		content:"";
+		position: absolute;
+		bottom: 10%;
+		top: 12%;
+		left: 10px;
+		z-index: 3;
+		background-image: url(/wp-content/themes/Saebr/images/grid.png);
+
+		background-attachment: fixed;
+		filter: opacity(0.5);
+		width: 63px !important;
+		height: auto;
+		border: 1px solid #fff;
+		box-shadow: 0 1px 3px rgba(34,25,25,.6);
+	}
 
 	.pc-hide {
 		display: block;

@@ -215,6 +215,8 @@ if ( !function_exists('Bing_post_meta') ) :
                         <span class="dashicons dashicons-editor-code"></span>
                         <a id="s-hide" href="javascript:;" class="">隐藏边栏</a>
                     </li>
+                    <li class="fontsize"><span class="smaller">A-</span></li>
+                    <li class="fontsize"><span class="bigger">A+</span></li>
                     <?php
                     break;
                 case 'tags' :

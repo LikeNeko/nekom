@@ -184,7 +184,7 @@ function Bing_enqueue_scripts() {
 
 	// NProgress
 	wp_register_style( 'theme-nprogress', get_template_directory_uri() . '/css/nprogress.css', array( 'theme-style' ), THEME_DB_VERSION );
-	wp_register_script( 'theme-nprogress', get_template_directory_uri() . '/js/nprogress.js', array( 'theme-base' ), THEME_DB_VERSION );
+	wp_register_script( 'theme-nprogress', get_template_directory_uri() . '/js/nprogress.js', array( 'theme-base' ), THEME_DB_VERSION ,true);
 	if ( Bing_mpanel( 'progress' ) && Bing_mpanel( 'ajax_load_page' ) ){
 		wp_enqueue_style( 'theme-nprogress' );
 		wp_enqueue_script( 'theme-nprogress' );
@@ -192,14 +192,14 @@ function Bing_enqueue_scripts() {
 
 	// Owl carousel
 	wp_register_style( 'theme-owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css', array( 'theme-style' ), THEME_DB_VERSION );
-	wp_register_script( 'theme-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery', 'theme-base' ), THEME_DB_VERSION );
+	wp_register_script( 'theme-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array( 'jquery', 'theme-base' ), THEME_DB_VERSION ,true);
 	if ( Bing_mpanel( 'slider_home' ) ){
 		wp_enqueue_style( 'theme-owl-carousel' );
 		wp_enqueue_script( 'theme-owl-carousel' );
 	}
 
 	// Responsive
-	wp_register_style( 'theme-responsive', get_template_directory_uri() . '/css/responsive.css', array( 'theme-style' ), THEME_DB_VERSION );
+	wp_register_style( 'theme-responsive', get_template_directory_uri() . '/css/responsive.css', array( 'theme-style' ,'nekomiao'), THEME_DB_VERSION );
 
 	if ( Bing_mpanel( 'responsive' ) )
 		wp_enqueue_style( 'theme-responsive' );
@@ -213,7 +213,7 @@ function Bing_enqueue_scripts() {
 
 
 	// Base
-	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.min.js', array( 'jquery' ), THEME_DB_VERSION );
+	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.min.js', array( 'jquery' ), THEME_DB_VERSION ,true);
     
 
     wp_localize_script( 'theme-base', 'theme_base_args', array(
@@ -227,7 +227,7 @@ function Bing_enqueue_scripts() {
 	) );
 
 	// HTML 5
-	wp_enqueue_script( 'theme-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.0' );
+	wp_enqueue_script( 'theme-html5', get_template_directory_uri() . '/js/html5.js', array(), '3.7.0' ,true);
 	wp_script_add_data( 'theme-html5', 'conditional', 'lt IE 9' );
 }
 add_action( 'wp_enqueue_scripts', 'Bing_enqueue_scripts' );

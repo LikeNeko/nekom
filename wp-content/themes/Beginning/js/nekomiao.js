@@ -63,7 +63,63 @@
             navigator.serviceWorker.register('service-worker.js');
         };
          */
+        /**
+         * 百度自动提交
+         */
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+        /**
+         *  链接复制
+         */
+        $(document).on("click",'#copy_url',function () {
+            var text = $("#copy_url").attr("url-data");
+            if (window.clipboardData) {
+                window.clipboardData.setData("Text", text)
+                alert("已经成功将原文链接复制到剪贴板！");
+            } else {
+                var x=prompt('你的浏览器可能不能正常复制\n请您手动进行：',text);
+            }
+            return false;
+        })
 
+        /**
+         * 字号调整
+         */
+        $(document).on('click',".bigger, .smaller",function(){
+            var thisEle = $(".context").css("font-size");
+            var textFontSize = parseFloat(thisEle , 10);
+            var unit = thisEle.slice(-2);
+            var cName = $(this).attr("class");
+            if(cName == "bigger"){
+                textFontSize += 2;
+            }else if(cName == "smaller"){
+                textFontSize -= 2;
+            }
+            $(".context").css("font-size",  textFontSize + unit );
+        });
 
+        /**
+         * 点击板块跳转
+         */
+        $(document).on("click",'.panel',function () {
+            $(this).children("a").click();
+        })
+
+        /**
+         * 点击a标签替换标题
+         * */
+        $(document).on("click",'.post-title a',function () {
+            $(this).addClass('loading').text("正在努力加载中……");
+            return false;
+        })
     });
+
 })(jQuery, document, window, theme_base_args);

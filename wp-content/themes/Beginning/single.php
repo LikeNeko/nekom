@@ -33,15 +33,9 @@
 				</div>
 			</article>
             <!– 转载声明开始 –>
-            <blockquote class="copyright_single">
-                <center><font color=gray size=-1>
-                        本文由 [<strong><?php the_author_posts_link(); ?></strong>]
-                        原创，转载请注明转自：<strong><?php bloginfo('name'); ?></strong>[<a
-                                href="<?php echo get_settings('home'); ?>"><?php echo get_settings('home'); ?></a>]；<br>
-                        本文链接：<a href="<?php the_permalink() ?>"
-                                title="<?php the_title(); ?>"><?php the_permalink(); ?></a>
-                    </font></center>
-            </blockquote>
+            <div class="authorbio">
+                <?php get_template_part( 'includes/copyright' ); ?>
+            </div>
             <!– 转载声明结束 –>
 
             <?php
