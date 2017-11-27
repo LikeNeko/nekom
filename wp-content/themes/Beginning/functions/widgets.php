@@ -9,7 +9,7 @@ function Bing_widgets_init(){
 		'name'          => __( '默认侧边栏', 'Bing' ),
 		'id'            => sanitize_title( THEME_SLUG . '_default' ),
 		'description'   => __( '没有单独指定的页面使用此侧边栏', 'Bing' ),
-		'before_widget' => '<li class="widget span12 %2$s"><article class="panel">',
+		'before_widget' => '<li class="widget span12 %2$s"><article class="panel" data-aos="zoom-in">',
 		'after_widget'  => '</article></li>',
 		'before_title'  => '<header class="panel-header"><h3 class="widget-title">',
 		'after_title'   => '</h3></header>'

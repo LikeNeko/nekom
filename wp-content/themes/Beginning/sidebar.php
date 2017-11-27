@@ -1,8 +1,8 @@
-<aside id="sidebar" itemscope itemtype="http://schema.org/WPSideBar" class="">
+<aside id="sidebar" itemscope  class="">
 	<ul class="row">
 		<?php if( !dynamic_sidebar( Bing_current_sidebar() ) ): ?>
 			<li class="span12 empty-sidebar">
-				<div class="panel">
+				<div class="panel" data-aos="zoom-in">
 					<header class="panel-header">
 						<h3 class="empty-sidebar-title"><?php echo $GLOBALS['wp_registered_sidebars'][Bing_current_sidebar()]['name']; ?></h3>
 					</header>

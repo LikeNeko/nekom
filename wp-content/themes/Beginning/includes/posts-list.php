@@ -60,7 +60,7 @@ if ( !function_exists('Bing_posts_list_loop') ) :
         $thumbnail_class = Bing_mpanel('thumbnail') ? 'thumbnail' : '';
         ?>
         <li <?php post_class(array('span12', $thumbnail_class)); ?>>
-            <article class="panel">
+            <article class="panel" data-aos="zoom-in">
                 <header class="panel-header">
                     <?php the_title('<' . Bing_get_main_list_title_tag() . ' class="post-title"><a href="' . esc_url(get_permalink()) . '" title="' . the_title_attribute('echo=0') . '" rel="bookmark">', '</a></' . Bing_get_main_list_title_tag() . '>'); ?>
                 </header>

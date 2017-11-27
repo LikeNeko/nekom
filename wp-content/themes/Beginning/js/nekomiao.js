@@ -1,4 +1,10 @@
 (function ($, document, window, args) {
+    AOS.init({
+        offset: 100,
+        duration: 600,
+        easing: "ease-out-back",
+        delay: 100,
+    });
     $(function () {
 
         // 隐藏侧边
@@ -120,6 +126,7 @@
             $(this).addClass('loading').text("正在努力加载中……");
             return false;
         })
+
     });
 
 })(jQuery, document, window, theme_base_args);

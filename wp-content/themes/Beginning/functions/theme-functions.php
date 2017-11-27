@@ -201,6 +201,10 @@ function Bing_enqueue_scripts() {
 	// Responsive
 	wp_register_style( 'theme-responsive', get_template_directory_uri() . '/css/responsive.css', array( 'theme-style' ,'nekomiao'), THEME_DB_VERSION );
 
+	// 页面特效插件
+	wp_enqueue_style( 'aos', get_template_directory_uri() . '/css/aos.css', array( 'theme-style'), THEME_DB_VERSION );
+	wp_enqueue_script( 'aos', get_template_directory_uri() . '/js/aos.js', array( 'jquery'), THEME_DB_VERSION );
+
 	if ( Bing_mpanel( 'responsive' ) )
 		wp_enqueue_style( 'theme-responsive' );
 
