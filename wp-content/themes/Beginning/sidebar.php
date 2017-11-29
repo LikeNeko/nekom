@@ -2,7 +2,7 @@
 	<ul class="row">
 		<?php if( !dynamic_sidebar( Bing_current_sidebar() ) ): ?>
 			<li class="span12 empty-sidebar">
-				<div class="panel" data-aos="zoom-in">
+				<div class="panel">
 					<header class="panel-header">
 						<h3 class="empty-sidebar-title"><?php echo $GLOBALS['wp_registered_sidebars'][Bing_current_sidebar()]['name']; ?></h3>
 					</header>

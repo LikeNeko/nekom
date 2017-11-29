@@ -375,6 +375,7 @@
                     // 兼容 Hermit 音乐播放器
                     if (window.hermitjs)
                         hermitjs.reload(0);
+                    $('.panel').attr('data-aos','zoom-in')
 
                     history.pushState(get_state(), data.title, url);
                     goto_hash_element();
@@ -382,6 +383,7 @@
                 }
             });
         }
+        $('.panel').attr('data-aos','zoom-in')
 
         //浏览器前进后退
         window.addEventListener('popstate', function (e) {

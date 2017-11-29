@@ -39,7 +39,7 @@ wp_footer();
         var selection;
         selection = window.getSelection();
         if ( ! window.clipboardData) {
-            var pagelink = "<br><br>——出自[ 猫窝博客 ] ， 转载请保留原文链接: " + document.location.href + "";
+            var pagelink = "——出自[ 猫窝博客 ] ， 转载请保留原文链接: " + document.location.href + "";
             var copytext = selection + pagelink;
             var newdiv = document.createElement('div');
             newdiv.style.position = 'absolute';
@@ -61,7 +61,7 @@ wp_footer();
     }
 
     document.oncopy = function () {
-        addLink();
+        /*addLink();*/
     };
 
 </script>

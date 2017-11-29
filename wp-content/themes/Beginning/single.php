@@ -33,7 +33,7 @@
 				</div>
 			</article>
             <!– 转载声明开始 –>
-            <div class="authorbio">
+            <div class="authorbio panel">
                 <?php get_template_part( 'includes/copyright' ); ?>
             </div>
             <!– 转载声明结束 –>
