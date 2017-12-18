@@ -190,7 +190,7 @@ if ( !function_exists( 'Bing_mobile_page_navi' ) ) :
 						<?php _e( '加载中...', 'Bing' ); ?>
 					</p>
 				<?php else: ?>
-					<p class="help-text"><?php _e( '全部加载完成', 'Bing' ); ?></p>
+					<p class="help-text"><?php _e( '全部加载完成的说＞▽＜', 'Bing' ); ?></p>
 				<?php endif; ?>
 			</div>
 		</div>

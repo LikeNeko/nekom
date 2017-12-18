@@ -22,6 +22,7 @@ add_action( 'template_redirect', 'Bing_ajax_load_page', 2 );
  * 处理 AJAX 加载页面数据
  */
 function Bing_ajax_load_page_data( $code ){
+    $code =  str_replace('article class="panel"','article class="panel"'.' data-aos="zoom-in"',$code);
 	$defaults = array(
 		'code'            => $code,
 		'title'           => wp_get_document_title(),

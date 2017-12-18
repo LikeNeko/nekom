@@ -9,7 +9,6 @@
  * License: GPLv3 or later
  */
 if(is_admin()){
-
 define( 'WP_EDITORMD_PLUGIN_VERSION', '3.5' ); //版本说明
 define( 'WP_EDITORMD_PLUGIN_URL', plugins_url( '', __FILE__ ) ); //插件资源路径
 define( 'WP_EDITORMD_PLUGIN_PATH', dirname( __FILE__ ) ); //插件路径文件夹
@@ -135,7 +134,7 @@ if ( isset( $options['support_flowchart'] ) && $options['support_flowchart'] == 
 //Sequence
 if ( isset( $options['support_sequence'] ) && $options['support_sequence'] == 1 ) {
 	add_action( 'wp_enqueue_scripts', array( $editormd, 'sequence_enqueue_scripts' ) );
-	//remove_filter ('the_content', 'wpautop');//禁止自动给文章段落添加<p>,<br/>等标签
+	remove_filter ('the_content', 'wpautop');//禁止自动给文章段落添加<p>,<br/>等标签
 	//remove_filter ('comment_text', 'wpautop');//禁止自动给评论段落添加<p>,<br/>等标签
 }
 

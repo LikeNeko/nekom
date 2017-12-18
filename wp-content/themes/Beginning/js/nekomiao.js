@@ -5,6 +5,7 @@
         easing: "ease-out-back",
         delay: 100,
     });
+
     $(function () {
 
         // 隐藏侧边
@@ -13,9 +14,12 @@
             if (R.attr('class') == "r-hide") {
                 R.attr("class", '')
                 $("#s-hide").html('隐藏侧边')
+                $(".context").css('font-size','14px');
                 R.show('slow');
             } else if (R.attr('class') == "") {
                 R.attr("class", 'r-hide')
+
+                $(".context").css('font-size','20px');
                 $("#s-hide").html('显示侧边')
                 R.hide("slow");
             }
@@ -126,7 +130,6 @@
             $(this).addClass('loading').text("正在努力加载中……");
             return false;
         })
-
     });
 
 })(jQuery, document, window, theme_base_args);

@@ -29,11 +29,21 @@ function Neko_enqueue_scripts()
     //    wp_enqueue_script('prettify','https://cdn.bootcss.com/prettify/r298/prettify.min.css');
     wp_enqueue_script( 'nekomiao', get_template_directory_uri() . '/js/nekomiao.js', ['jquery'], '' ,true);
     wp_enqueue_style( 'nekomiao', get_template_directory_uri() . '/css/nekomiao.css', [], THEME_DB_VERSION );
+    if ( !is_admin() ) {
+        wp_deregister_script( 'jquery' );
+        wp_enqueue_script( 'jquery', ( "https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" ), false, THEME_DB_VERSION, true );
+        
 
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'Neko_enqueue_scripts' );
 
+function ds_print_jquery_in_footer( &$scripts) {
+    if ( ! is_admin() )
+        $scripts->add_data( 'jquery', 'group', 1 );
+}
+add_action( 'wp_default_scripts', 'ds_print_jquery_in_footer' );
 
 /**
  * 去除控制台显示的jQuery迁徙
@@ -43,6 +53,7 @@ add_action( 'wp_default_scripts', function ( $scripts ) {
     if ( !empty( $scripts->registered['jquery'] ) ) {
         $jquery_dependencies = $scripts->registered['jquery']->deps;
         $scripts->registered['jquery']->deps = array_diff( $jquery_dependencies, array('jquery-migrate') );
+
     }
 } );
 

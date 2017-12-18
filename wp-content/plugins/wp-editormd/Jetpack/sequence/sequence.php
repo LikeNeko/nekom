@@ -42,7 +42,7 @@ function seq_src( $matches ) {
 
 function seq_script() {
 	$seqStyle = paf("sequence_style");
-	echo '<script type="text/javascript" defer="defer">$(".diagram").sequenceDiagram({theme: "'. $seqStyle .'"})</script>';
+	echo '<script type="text/javascript" defer="defer" id="123">$(".diagram").sequenceDiagram({theme: "'. $seqStyle .'"})</script>';
 }
 
 add_filter( 'the_content', 'seq_markup', 9 ); // before wptexturize
