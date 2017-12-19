@@ -6,6 +6,34 @@
     overflow: hidden;
     position: relative;
 }
+/* Table Head */
+.context thead th {
+    background-color: rgb(81, 130, 187);
+    color: #fff;
+    border-bottom-width: 0;
+}
+.context table{
+    border:1px rgb(81, 130, 187) solid !important;
+}
+
+/* Column Style */
+.context td {
+    color: #000;
+}
+/* Heading and Column Style */
+.context tr, .context th {
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(81, 130, 187);
+}
+
+/* Padding and font style */
+.context td, .context th {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: bold;
+}
 
 /* 给文章缩略图加模糊 */
 /*.posts-list>li .thumbnail-link .thumbnail {*/
