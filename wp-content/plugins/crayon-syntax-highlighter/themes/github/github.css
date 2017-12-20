@@ -115,26 +115,3 @@ URL: http://firn.jp/
 .crayon-theme-github .crayon-pre .crayon-h {
     color: #006fe0 !important;
 }
-.context table {
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #E6E6EB;
-}
-
-.context table tr:nth-child( odd ) {
-    background: #FAFAFA;
-}
-
-.context table tr:last-child td {
-    border-bottom: none;
-}
-
-.context table tr td {
-    border: solid #E6E6EB;
-    border-width: 0 1px 1px 0;
-    padding: 4px 8px;
-}
-
-.context table tr td:last-child {
-    border-right: none;
-}
