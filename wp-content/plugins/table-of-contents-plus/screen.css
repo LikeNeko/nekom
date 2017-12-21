@@ -21,6 +21,7 @@
 	margin-left:1.5em;
 }
 
+
 #toc_container {
 	background:#f9f9f9;
 	border:1px solid #aaa;
@@ -51,6 +52,7 @@
 	text-align:center;
 	font-weight:700;
 	margin:0;
+	margin-right:2em;
 	padding:0;
 }
 
@@ -65,6 +67,7 @@
 
 #toc_container p.toc_title + ul.toc_list {
 	margin-top:1em;
+	margin-left:2em;
 }
 
 .toc_wrap_left {

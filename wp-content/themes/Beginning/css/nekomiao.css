@@ -6,6 +6,13 @@
     overflow: hidden;
     position: relative;
 }
+/*文章目录调整*/
+#toc_container p.toc_title{
+    margin-right:2em;
+}
+#toc_container p.toc_title+ul.toc_list{
+    margin-left: 2em;
+}
 
 /*蒲公英*/
 @media screen and (max-width:600px){
@@ -287,7 +294,8 @@ h1.logo:before {
 
 /* 字体阴影 */
 section.context {
-    text-shadow: 0px 2px 3px #3b5384;
+    text-shadow: 0px 1px 1px #3b5384;
+    font-size:14px;
 }
 
 /* duosuo微语 */

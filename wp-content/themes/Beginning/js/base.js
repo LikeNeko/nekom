@@ -378,7 +378,9 @@
                     $('.panel').attr('data-aos','zoom-in')
 
                     history.pushState(get_state(), data.title, url);
-                    goto_hash_element();
+                    if( ! goto_hash_element()){
+                        return;
+                    };
                     progress('inc');
                 }
             });
@@ -421,10 +423,13 @@
 
         //锚点跳转
         function goto_hash_element() {
-            setTimeout(function () {
-                var hash_element = $(location.hash);
-                if (hash_element.length) $('html, body').animate({scrollTop: hash_element.offset().top}, 120);
-            }, 500);
+            var hash_element = $(location.hash);
+            if (hash_element.length){
+                $('html, body').animate({scrollTop: hash_element.offset().top}, 300);
+                return true;
+
+            }
+
         }
 
         //设置移动菜单高亮

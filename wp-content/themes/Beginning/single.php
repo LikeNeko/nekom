@@ -32,11 +32,14 @@
 					</section>
 				</div>
 			</article>
+
+            <?php if(!wp_is_mobile()):?>
             <!– 转载声明开始 –>
             <div class="authorbio panel">
                 <?php get_template_part( 'includes/copyright' ); ?>
             </div>
             <!– 转载声明结束 –>
+            <?php endif;?>
 
             <?php
 			Bing_banner_post_bottom();

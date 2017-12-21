@@ -31,7 +31,7 @@ function Neko_enqueue_scripts()
     wp_enqueue_style( 'nekomiao', get_template_directory_uri() . '/css/nekomiao.css', [], THEME_DB_VERSION );
     if ( !is_admin() ) {
         wp_deregister_script( 'jquery' );
-        wp_enqueue_script( 'jquery', ( "https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" ), false, THEME_DB_VERSION, true );
+        wp_enqueue_script( 'jquery', ( get_template_directory_uri() . '/js/jquery.min.js' ), false, THEME_DB_VERSION, true );
         
 
     }
