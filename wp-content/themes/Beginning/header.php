@@ -32,17 +32,6 @@
 					<nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php echo Bing_nav_menu( 'header_menu' ); ?>
 					</nav>
-					<ul class="control">
-						<li class="previous">
-							<a class="dashicons dashicons-arrow-left-alt" href="javascript:history.go( -1 );" title="<?php esc_attr_e( '后退', 'Bing' ); ?>"></a>
-						</li>
-						<li class="next">
-							<a class="dashicons dashicons-arrow-right-alt" href="javascript:history.go( 1 );" title="<?php esc_attr_e( '前进', 'Bing' ); ?>"></a>
-						</li>
-						<li class="refresh">
-							<a class="dashicons dashicons-image-rotate" href="javascript:location.reload();" title="<?php esc_attr_e( '刷新', 'Bing' ); ?>"></a>
-						</li>
-					</ul>
 
 					<?php get_search_form(); ?>
 				</div>

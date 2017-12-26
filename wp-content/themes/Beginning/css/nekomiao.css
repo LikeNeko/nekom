@@ -6,6 +6,17 @@
     overflow: hidden;
     position: relative;
 }
+
+/*首页板块文章meta信息优化*/
+.posts-list>li .post-meta>li {
+    padding: 2px 5px;
+    margin-right: 5px;
+}
+#container .right-box ul.post-meta {
+    position: absolute ;
+    bottom: 10px;
+}
+
 /*文章目录调整*/
 #toc_container p.toc_title{
     margin-right:2em;
