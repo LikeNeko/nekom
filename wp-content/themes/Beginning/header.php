@@ -32,7 +32,7 @@
 					<nav class="menu header-menu-box" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php echo Bing_nav_menu( 'header_menu' ); ?>
 					</nav>
-
+<!--移除-->
 					<?php get_search_form(); ?>
 				</div>
 				<?php Bing_mobile_header(); ?>
