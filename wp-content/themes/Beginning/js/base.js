@@ -247,13 +247,17 @@
         var start_push = true,
             ajax_obj = null,
             menu = null,
-            load_posts_list = false;
+            load_posts_list = false,
+            goto_hash = null;
 
         //AJAX 加载链接
         $(document).on('click', 'a:not([data-no-ajax], .comment-reply-link, #cancel-comment-reply-link)', function () {
             var url = $(this).attr('href'),
                 site_url = args.site_url,
                 target = $(this).attr('target');
+
+            goto_hash = url;
+
             if (
                 ( target && target != '_self' ) ||
                 this.pathname.indexOf('/wp-admin') !== -1 ||
@@ -274,7 +278,14 @@
                 this.pathname.indexOf('.psd') !== -1 ||
                 this.hostname != document.domain
             ) return true;
-            ajax_load_page(url);
+
+            // 如果是跳转标题 则不load页面
+            if(url.indexOf("#") !== -1){
+                goto_hash_element();
+            }else{
+                ajax_load_page(url);
+            }
+
             return false;
         });
 
@@ -378,9 +389,7 @@
                     $('.panel').attr('data-aos','zoom-in')
 
                     history.pushState(get_state(), data.title, url);
-                    if( ! goto_hash_element()){
-                        return;
-                    };
+                    goto_hash_element()
                     progress('inc');
                 }
             });
@@ -423,13 +432,15 @@
 
         //锚点跳转
         function goto_hash_element() {
-            var hash_element = $(location.hash);
-            if (hash_element.length){
-                $('html, body').animate({scrollTop: hash_element.offset().top}, 300);
-                return true;
-
-            }
-
+            setTimeout(function () {
+                var hash_element = $(location.hash);
+                if (hash_element.length){
+                    $('html, body').animate({scrollTop: hash_element.offset().top-100}, 300);
+                }else if(goto_hash.indexOf('#') != -1){
+                    hash_element = $(goto_hash);
+                    $('html, body').animate({scrollTop: hash_element.offset().top-100}, 300);
+                }
+            },300)
         }
 
         //设置移动菜单高亮

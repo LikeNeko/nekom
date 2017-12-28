@@ -73,19 +73,7 @@
             navigator.serviceWorker.register('service-worker.js');
         };
          */
-        /**
-         * 百度自动提交
-         */
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
+
         /**
          *  链接复制
          */
@@ -127,9 +115,23 @@
          * 点击a标签替换标题
          * */
         $(document).on("click",'.post-title a',function () {
-            $(this).addClass('loading').text("正在努力加载中……");
-            return false;
+
+            $(this).text("正在努力加载中……");
+
         })
+        /**
+         * 一言
+         */
+        $.get("https://api.lwl12.com/hitokoto/main/get",{},function (data) {
+            $('.info').text(data)
+        })
+        setInterval(function () {
+            $.get("https://api.lwl12.com/hitokoto/main/get",{},function (data) {
+                $('.info').text(data)
+            })
+        },10000)
+
+
     });
 
 })(jQuery, document, window, theme_base_args);

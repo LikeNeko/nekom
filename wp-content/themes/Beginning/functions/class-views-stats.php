@@ -127,6 +127,12 @@ final class Bing_Views_Stats {
 		if ( !$post = get_post( $post ) )
 			return false;
 
+        global $current_user;
+        get_currentuserinfo();
+        if($current_user->ID==1){
+            return false;
+        }
+
 		$views  = $this->get_views( $post );
 		$result = update_post_meta( $post->ID, 'views', ++$views );
 

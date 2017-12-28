@@ -1,11 +1,18 @@
 /* 一言 */
 #yiyan {
-    float: right;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+    position: absolute;
+    top: 50px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 17px;
 }
+#yiyan .type {
+    margin-right: 5px;
+    color: #127ec5;
+    position: relative;
+    top: -1px;
+}
+
 
 /*首页板块文章meta信息优化*/
 .posts-list>li .post-meta>li {

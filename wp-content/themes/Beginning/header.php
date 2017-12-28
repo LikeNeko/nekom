@@ -33,6 +33,12 @@
 						<?php echo Bing_nav_menu( 'header_menu' ); ?>
 					</nav>
 <!--移除-->
+                    <div id="yiyan">
+                        <span class="type">[一言]</span>
+                        <span class="info">
+
+                        </span>
+                    </div>
 					<?php get_search_form(); ?>
 				</div>
 				<?php Bing_mobile_header(); ?>
