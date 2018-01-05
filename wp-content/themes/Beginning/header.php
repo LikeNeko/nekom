@@ -3,7 +3,6 @@
 <html class="no-js" <?php language_attributes(); ?>>
 	<head>
 		<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>" />
-		<link rel="profile" href="http://gmpg.org/xfn/11" />
         <link rel="shortcut icon" href=" /favicon.ico" />
         <meta name="keywords"  content="wordpress 猫窝博客 猫窝 喵窝博客 喵窝 Neko" />
         <meta name="google-site-verification" content="rr8BzOo1mxgRE_L1IsxXxikLZbJMIbSTaJ3YOWVCHjo" />
@@ -36,7 +35,7 @@
                     <div id="yiyan">
                         <span class="type">[一言]</span>
                         <span class="info">
-
+>>>
                         </span>
                     </div>
 					<?php get_search_form(); ?>

@@ -69,33 +69,33 @@ wp_footer();
     document.oncopy = function () {
         /*addLink();*/
     };
-function getOs()
-{
-    var OsObject = "";
-    if(navigator.userAgent.indexOf("MSIE")>0) {
-        return "MSIE";
-    }
-    if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
-        return "Firefox";
-    }
-    if(isSafari=navigator.userAgent.indexOf("Safari")>0) {
-        return "Safari";
-    }
-    if(isCamino=navigator.userAgent.indexOf("Camino")>0){
-        return "Camino";
-    }
-    if(isMozilla=navigator.userAgent.indexOf("Gecko/")>0){
-        return "Gecko";
-    }
-
-}
-switch (getOs()){
-    case  'Firefox':
-        if(localStorage.isShow == undefined){
-            alert("检测到您的浏览器类型为:火狐\n当前博主未对该浏览器进行任何优化\n为给您以最优质的浏览体验，建议您使用\n谷歌浏览器、QQ浏览器等进行访问~\n本弹框仅在第一次访问时弹出。\n谢谢，祝您浏览愉快~");
-            localStorage.isShow = 1;
+    function getOs() {
+        var OsObject = "";
+        if(navigator.userAgent.indexOf("MSIE")>0) {
+            return "MSIE";
         }
-}
+        if(isFirefox=navigator.userAgent.indexOf("Firefox")>0){
+            return "Firefox";
+        }
+        if(isSafari=navigator.userAgent.indexOf("Safari")>0) {
+            return "Safari";
+        }
+        if(isCamino=navigator.userAgent.indexOf("Camino")>0){
+            return "Camino";
+        }
+        if(isMozilla=navigator.userAgent.indexOf("Gecko/")>0){
+            return "Gecko";
+        }
+
+    }
+    switch (getOs()){
+        case  'Firefox':
+            if(sessionStorage.isShow == undefined){
+                alert("检测到您的浏览器类型为:火狐\n当前博主未对该浏览器进行任何优化\n为给您以最优质的浏览体验，建议您使用\n谷歌浏览器、QQ浏览器等进行访问~\n本弹框仅在第一次访问时弹出。\n谢谢，祝您浏览愉快~");
+                sessionStorage.isShow = 1;
+            }
+
+    }
 
 
 </script>

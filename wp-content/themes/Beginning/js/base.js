@@ -232,7 +232,7 @@
         }
     });
 
-    $('.cd-top').on('click','#return_top', function () {
+    $('.cd-top').on('click', function () {
         $('body,html').animate({
                 scrollTop: 0,
             },700
@@ -255,6 +255,8 @@
             var url = $(this).attr('href'),
                 site_url = args.site_url,
                 target = $(this).attr('target');
+
+            $(this).attr("click",'on');
 
             goto_hash = url;
 
@@ -279,12 +281,8 @@
                 this.hostname != document.domain
             ) return true;
 
-            // 如果是跳转标题 则不load页面
-            if(url.indexOf("#") !== -1){
-                goto_hash_element();
-            }else{
-                ajax_load_page(url);
-            }
+            ajax_load_page(url);
+
 
             return false;
         });
@@ -321,6 +319,12 @@
 
         //AJAX 加载页面
         function ajax_load_page(url) {
+            if(url.indexOf("#")==0){
+                goto_hash_element();
+                return;
+            }
+
+
             if (ajax_obj) ajax_obj.abort();
             ajax_obj = $.ajax({
                 url: url,
@@ -331,11 +335,19 @@
                     progress('start');
                     progress('inc');
                     $('#container').fadeTo(500, 0.3);
+
+                    sessionStorage.link_tmp = $('a[click="on"]').text();
+                    $('a[click="on"]').text("正在努力加载中……");
                 },
                 complete: function () {
                     ajax_obj = null;
                 },
                 error: function (request) {
+
+                    $('#container').fadeTo(500, 1);
+                    $('a[click="on"]').text(sessionStorage.link_tmp);
+                    $('a[click="on"]').attr("click",'');
+
                     switch (request.statusText) {
                         case 'abort':
                             progress('done');
@@ -389,7 +401,7 @@
                     $('.panel').attr('data-aos','zoom-in')
 
                     history.pushState(get_state(), data.title, url);
-                    goto_hash_element()
+                    goto_hash_element();
                     progress('inc');
                 }
             });
@@ -406,6 +418,9 @@
             set_mobile_menu_current(e.state.mobile_menu_current);
             $('#mobile-header .mobile-title').html(e.state.mobile_title);
             e.state.mobile_return_show ? $('#mobile-header .mobile-return').addClass('show') : $('#mobile-header .mobile-return').removeClass('show');
+            $("#container").fadeTo(500,1);
+            $('a[click="on"]').text( sessionStorage.link_tmp);
+            $('a[click="on"]').attr("click",'');
         });
 
         //调用进度条
@@ -436,7 +451,7 @@
                 var hash_element = $(location.hash);
                 if (hash_element.length){
                     $('html, body').animate({scrollTop: hash_element.offset().top-100}, 300);
-                }else if(goto_hash.indexOf('#') != -1){
+                }else if(goto_hash.indexOf('#') === 0){
                     hash_element = $(goto_hash);
                     $('html, body').animate({scrollTop: hash_element.offset().top-100}, 300);
                 }

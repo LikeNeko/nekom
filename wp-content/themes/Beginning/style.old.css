@@ -1,6 +1,6 @@
 @charset "utf-8";
 /**
- * Theme Name: Beginning
+ * Theme Name: Beginning1
  * Theme URI:  https://www.bgbk.org/wp-theme-beginning/
  *
  * Description: The template by <a href="https://www.bgbk.org">斌果</a>.
@@ -323,17 +323,7 @@ select:hover {
 
 }
 
-@-0-keyframes rotate {
 
-	from {
-		-0-transform: rotate( 0 );
-	}
-
-	to {
-		-0-transform: rotate( 360deg );
-	}
-
-}
 
 /*----------------------------------------------------------
 	Wrapper

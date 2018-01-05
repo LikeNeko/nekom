@@ -217,7 +217,7 @@ function Bing_enqueue_scripts() {
 
 
 	// Base
-	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.min.js', array( 'jquery' ), THEME_DB_VERSION ,true);
+	wp_enqueue_script( 'theme-base', get_template_directory_uri() . '/js/base.js', array( 'jquery' ), THEME_DB_VERSION ,true);
     
 
     wp_localize_script( 'theme-base', 'theme_base_args', array(
