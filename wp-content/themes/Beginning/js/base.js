@@ -255,8 +255,9 @@
             var url = $(this).attr('href'),
                 site_url = args.site_url,
                 target = $(this).attr('target');
-
-            $(this).attr("click",'on');
+            if($(this).parents('.panal').html()){
+                $(this).attr("click",'on');
+            }
 
             goto_hash = url;
 
@@ -337,7 +338,7 @@
                     $('#container').fadeTo(500, 0.3);
                     if(!is_mobile()){
                         sessionStorage.link_tmp = $('a[click="on"]').text();
-                        $('a[click="on"]').text("正在努力加载中……");
+                        $('[click="on"]').text("正在努力加载中……");
                     }
                 },
                 complete: function () {
