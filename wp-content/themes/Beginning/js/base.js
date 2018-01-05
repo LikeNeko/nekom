@@ -335,18 +335,21 @@
                     progress('start');
                     progress('inc');
                     $('#container').fadeTo(500, 0.3);
-
-                    sessionStorage.link_tmp = $('a[click="on"]').text();
-                    $('a[click="on"]').text("正在努力加载中……");
+                    if(!is_mobile()){
+                        sessionStorage.link_tmp = $('a[click="on"]').text();
+                        $('a[click="on"]').text("正在努力加载中……");
+                    }
                 },
                 complete: function () {
                     ajax_obj = null;
                 },
                 error: function (request) {
-
+                    if(!is_mobile()){
+                        $('a[click="on"]').text(sessionStorage.link_tmp);
+                        $('a[click="on"]').attr("click",'');
+                    }
                     $('#container').fadeTo(500, 1);
-                    $('a[click="on"]').text(sessionStorage.link_tmp);
-                    $('a[click="on"]').attr("click",'');
+
 
                     switch (request.statusText) {
                         case 'abort':
@@ -419,8 +422,11 @@
             $('#mobile-header .mobile-title').html(e.state.mobile_title);
             e.state.mobile_return_show ? $('#mobile-header .mobile-return').addClass('show') : $('#mobile-header .mobile-return').removeClass('show');
             $("#container").fadeTo(500,1);
-            $('a[click="on"]').text( sessionStorage.link_tmp);
-            $('a[click="on"]').attr("click",'');
+            if(!is_mobile()){
+                $('a[click="on"]').text( sessionStorage.link_tmp);
+                $('a[click="on"]').attr("click",'');
+            }
+
         });
 
         //调用进度条

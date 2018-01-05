@@ -163,6 +163,24 @@
     };
 
 })(jQuery);
+/*判断是不是手机端*/
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i) ? true : false;
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i) ? true : false;
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i) ? true : false;
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) ? true : false;
+    },
+    any: function() {
+        return (this.Android() || this.BlackBerry() || this.iOS() || this.Windows());
+    }
+};
 
 (function ($, document, window, args) {
     AOS.init({
@@ -280,10 +298,12 @@
         /**
          * 一言
          */
-        yiyan();
-        setInterval(function () {
+        if( ! isMobile.any()){
             yiyan();
-        },10000)
+            setInterval(function () {
+                yiyan();
+            },10000)
+        }
         function yiyan() {
             $.get("https://api.lwl12.com/hitokoto/main/get",{},function (data) {
                 var s_str = data;
