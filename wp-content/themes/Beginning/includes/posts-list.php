@@ -136,6 +136,7 @@ if ( !function_exists('Bing_thumbnail') ) :
         $title_attribute = the_title_attribute('echo=0');
         $url = Bing_post_thumbnail_url();
 
+        // 用作给出裁剪后的缩略图地址
         if ( Bing_mpanel('crop_thumbnail') ) $url = Bing_crop_thumbnail($url, $width, $height);
 
         $code = sprintf('<img src="%s" class="thumbnail" width="%s" height="%s" title="%s" alt="%s" />', esc_url($url), esc_attr($width), esc_attr($height), $title_attribute, $title_attribute);

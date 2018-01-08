@@ -163,6 +163,52 @@
     };
 
 })(jQuery);
+
+/*逐字打印效果插件 */
+(function ( $ ) {
+    $.fn.lbyl = function( options ) {
+
+        var s = $.extend({
+            content: '',
+            speed: 10,
+            type: 'fade',
+            fadeSpeed: 500,
+            finished: function(){}
+        }, options );
+
+        var elem = $(this),
+            letterArray = [],
+            lbylContent = s.content,
+            count = $(this).length;
+
+        elem.empty();
+        elem.attr('data-time', lbylContent.length * s.speed)
+
+        for (var i = 0; i < lbylContent.length; i++) {
+            letterArray.push(lbylContent[i]);
+        }
+
+        $.each(letterArray, function(index, value) {
+            elem.append('<span style="display: none;">' + value + '</span>');
+
+            setTimeout(function(){
+                if (s.type == 'show') {
+                    elem.find('span:eq(' + index + ')').show();
+                } else if (s.type == 'fade') {
+                    elem.find('span:eq(' + index + ')').fadeIn(s.fadeSpeed);
+                }
+            }, index * s.speed);
+
+        });
+
+        setTimeout(function(){
+            s.finished();
+        }, lbylContent.length * s.speed);
+
+    };
+
+}( jQuery ));
+
 /*判断是不是手机端*/
 var isMobile = {
     Android: function() {
@@ -310,12 +356,17 @@ var isMobile = {
                 if(data.length>=50){
                    s_str = s_str.substring(0,50)+'...';
                 }
-                $('#yiyan').hide(100);
-                $('.info').text(s_str);
-                $('#yiyan').show(500);
+                $('.info').lbyl({
+                    content:s_str,
+                    speed: 150,
+                    type: 'fade',
+                    fadeSpeed: 500
+                })
 
             })
         }
+
+
 
     });
 

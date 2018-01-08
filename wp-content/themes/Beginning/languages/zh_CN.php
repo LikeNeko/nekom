@@ -10,10 +10,10 @@ add_filter( 'run_wptexturize', '__return_false', 12 );
  * @since Beginning 4.0.1
  * @see https://cdnjs.com/libraries/twemoji
  */
-function Bing_emoji_url_cdnjs() {
-	return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.1/2/72x72/';
-}
-add_filter( 'emoji_url', 'Bing_emoji_url_cdnjs', 8 );
+//function Bing_emoji_url_cdnjs() {
+//	return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.1/2/72x72/';
+//}
+//add_filter( 'emoji_url', 'Bing_emoji_url_cdnjs', 8 );
 
 /**
  * 解决 SVG Emoji 表情无法使用的问题
@@ -23,10 +23,10 @@ add_filter( 'emoji_url', 'Bing_emoji_url_cdnjs', 8 );
  * @since Beginning 4.0.1
  * @see https://cdnjs.com/libraries/twemoji
  */
-function Bing_emoji_svg_url_cdnjs() {
-	return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.1/2/svg/';
-}
-add_filter( 'emoji_svg_url', 'Bing_emoji_svg_url_cdnjs', 8 );
+//function Bing_emoji_svg_url_cdnjs() {
+//	return 'https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.1/2/svg/';
+//}
+//add_filter( 'emoji_svg_url', 'Bing_emoji_svg_url_cdnjs', 8 );
 
 /**
  * 双核浏览器使用 Webkit 内核

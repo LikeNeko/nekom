@@ -317,7 +317,10 @@
         function html_decode(value) {
             return $('<p />').html(value).text();
         }
-
+        // 加载img
+        function loadimg() {
+            $('img')
+        }
         //AJAX 加载页面
         function ajax_load_page(url) {
             if(url.indexOf("#")==0){

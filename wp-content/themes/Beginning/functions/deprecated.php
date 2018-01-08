@@ -41,24 +41,24 @@ function Bing_emoji_svg_url_maxcdn() {
  *
  * add_action( 'init', 'Bing_remove_die_smileys', 8 );
  */
-function Bing_remove_die_smileys() {
-	global $wpsmiliestrans;
-	_deprecated_function( __FUNCTION__, '4.0.1' );
-
-	if( !isset( $wpsmiliestrans ) || !is_array( $wpsmiliestrans ) )
-		return;
-
-	$remove_smileys = array(
-		"\xf0\x9f\x99\x82",
-		"\xf0\x9f\x99\x81",
-
-		"\xf0\x9f\x99\x84"
-	);
-
-	foreach ( $wpsmiliestrans as $key => $smiley )
-		if ( in_array( $smiley, $remove_smileys ) )
-			unset( $wpsmiliestrans[$key] );
-}
+//function Bing_remove_die_smileys() {
+//	global $wpsmiliestrans;
+//	_deprecated_function( __FUNCTION__, '4.0.1' );
+//
+//	if( !isset( $wpsmiliestrans ) || !is_array( $wpsmiliestrans ) )
+//		return;
+//
+//	$remove_smileys = array(
+//		"\xf0\x9f\x99\x82",
+//		"\xf0\x9f\x99\x81",
+//
+//		"\xf0\x9f\x99\x84"
+//	);
+//
+//	foreach ( $wpsmiliestrans as $key => $smiley )
+//		if ( in_array( $smiley, $remove_smileys ) )
+//			unset( $wpsmiliestrans[$key] );
+//}
 
 /**
  * 保存主题版本
