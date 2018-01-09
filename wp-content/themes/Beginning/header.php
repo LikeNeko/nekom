@@ -10,6 +10,7 @@
         <link rel="alternate" href="https://i.nekom.cc/" hreflang="zh-Hans" />
         <meta name="theme-color" content="#f0f0f5"/>
 
+
         <?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?> >

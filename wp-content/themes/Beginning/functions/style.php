@@ -369,7 +369,7 @@ add_action( 'css', 'Bing_sidebar_width' );
  */
 function Bing_large_font() {
 	if ( Bing_mpanel( 'large_font' ) )
-		Bing_print_css( 'body', array( 'font-size' => '13px' ) );
+		Bing_print_css( 'body', array( 'font-size' => '15px' ) );
 }
 add_action( 'css', 'Bing_large_font' );
 

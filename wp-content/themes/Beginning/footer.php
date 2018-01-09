@@ -25,7 +25,7 @@
 </div>
 <?php if ( Bing_mpanel( 'return_top' ) ): ?>
 
-    <a href="#" class="cd-top"  data-no-ajax></a>
+    <a class="cd-top"  data-no-ajax></a>
     <?php
 endif;
 wp_footer();

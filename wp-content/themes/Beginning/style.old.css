@@ -70,7 +70,7 @@ body,
 	z-index: 99999;
 	width: 10%;
 	height: 40%;
-	background: url(images/gotop.png) no-repeat center;
+	background: url(images/gotop.gif) no-repeat center;
 	background-size: contain;
 	-webkit-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;

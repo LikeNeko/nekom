@@ -366,7 +366,21 @@ var isMobile = {
             })
         }
 
-
+        /**
+         * 小部件优化 跟随滚动
+         */
+        // $(window).scroll(function () {
+        //     var a = $('.toc_widget').offset().top;
+        //     if (a >= $(window).scrollTop() ) {
+        //         console.log('1')
+        //         $('.toc_widget').css({position:'fixed',width:309})
+        //     }else{
+        //         console.log('0')
+        //
+        //         $('.toc_widget').css({position:''})
+        //     }
+        //
+        // });
 
     });
 

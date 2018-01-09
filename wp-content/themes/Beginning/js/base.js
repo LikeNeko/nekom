@@ -405,7 +405,12 @@
                     // 兼容 Hermit 音乐播放器
                     if (window.hermitjs)
                         hermitjs.reload(0);
+
+                    // 给板块添加动态效果
                     $('.panel').attr('data-aos','zoom-in')
+
+                    // 触发滚动效果，消除lazyload带来的bug，切换后不加载图片
+                    $(window).scroll()
 
                     history.pushState(get_state(), data.title, url);
                     goto_hash_element();
