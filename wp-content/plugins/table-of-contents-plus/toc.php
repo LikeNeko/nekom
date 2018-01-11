@@ -1226,7 +1226,7 @@ if ( !class_exists( 'toc' ) ) :
 							$html .= $number . '.';
 						}
 						
-						$html .= ($numbered_items[$current_depth] + 1) . '</span> ';
+						$html .= ($numbered_items[$current_depth] + 1) . '.</span> ';
 						$numbered_items[$current_depth]++;
 					}
 					$html .= strip_tags($matches[$i][0]) . '</a>';

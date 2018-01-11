@@ -1,4 +1,5 @@
 <?php
+die('error');
 /* ----------------This probe is based on the YaHei.net probe------------------- */
 error_reporting(0); //抑制所有错误信息
 @header("content-Type: text/html; charset=utf-8"); //语言强制

@@ -362,26 +362,42 @@ var isMobile = {
                     type: 'fade',
                     fadeSpeed: 500
                 })
-
+                
             })
         }
 
         /**
          * 小部件优化 跟随滚动
          */
-        // $(window).scroll(function () {
-        //     var a = $('.toc_widget').offset().top;
-        //     if (a >= $(window).scrollTop() ) {
-        //         console.log('1')
-        //         $('.toc_widget').css({position:'fixed',width:309})
-        //     }else{
-        //         console.log('0')
-        //
-        //         $('.toc_widget').css({position:''})
-        //     }
-        //
-        // });
+        var elementPosition = $('.toc_widget').offset().top;
+        var objWidth = $('#sidebar').width();
+        var list = null;
+        $(window).scroll(function(){
+            if($(window).scrollTop() > elementPosition){
+                $('.toc_widget').css('position','fixed').css('width',objWidth);
+            } else {
+                $('.toc_widget').css('position','static');
+            }
+        });
 
+        /**
+         * 点击关闭shadow
+         */
+        if(1) {
+            $('.context').css({'text-shadow': 'none'});
+            $("body").css({'text-shadow': "none"});
+            $('.no_shadow').hide();
+        }
     });
-
+    $(function () {
+        ws = new WebSocket("wss://i.nekom.cc:2333");
+        ws.onopen = function() {
+            alert("连接成功");
+            ws.send('tom');
+            alert("给服务端发送一个字符串：tom");
+        };
+        ws.onmessage = function(e) {
+            alert("收到服务端的消息：" + e.data);
+        };
+    })
 })(jQuery, document, window, theme_base_args);
