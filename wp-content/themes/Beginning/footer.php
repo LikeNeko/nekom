@@ -25,7 +25,7 @@
 </div>
 <?php if ( Bing_mpanel( 'return_top' ) ): ?>
 
-    <a class="cd-top"  data-no-ajax></a>
+    <a class="cd-top" title="点我回到顶端哟o(*≧▽≦)ツ"  data-no-ajax ></a>
     <?php
 endif;
 wp_footer();
@@ -34,7 +34,7 @@ wp_footer();
 
 <script type="text/javascript">
     if (window.console && window.console.log) {
-        console.log("%c Neko  %c","background:#24272A; color:#ffffff","","喵?被两脚兽发现惹！Σ( ° △ °|||)︴ ");
+        console.log("%c  Neko  %c","background:#24272A; color:#ffffff","","喵?被两脚兽发现惹！Σ( ° △ °|||)︴ ");
     }
     
     /**

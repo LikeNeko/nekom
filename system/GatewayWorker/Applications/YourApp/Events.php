@@ -20,6 +20,7 @@
 //declare(ticks=1);
 
 use \GatewayWorker\Lib\Gateway;
+use Workerman\Lib\Timer;
 
 /**
  * 主逻辑
@@ -28,6 +29,11 @@ use \GatewayWorker\Lib\Gateway;
  */
 class Events
 {
+    public static function onWorkerStart(){
+        Timer::add(3, function(){
+            Gateway::sendToAll( json_encode(['type'=>"online",'num'=>Gateway::getAllClientCount()]));
+        });
+    }
     /**
      * 当客户端连接时触发
      * 如果业务不需此回调可以删除onConnect
@@ -35,28 +41,31 @@ class Events
      * @param int $client_id 连接id
      */
     public static function onConnect($client_id) {
-        // 向当前client_id发送数据 
-        Gateway::sendToClient($client_id, "Hello $client_id\n");
-        // 向所有人发送
-        Gateway::sendToAll("$client_id login\n");
+
+        Gateway::sendToAll( json_encode(['type'=>"online",'num'=>Gateway::getAllClientCount()]));
     }
-    
+
+
+
    /**
     * 当客户端发来消息时触发
     * @param int $client_id 连接id
     * @param mixed $message 具体消息
     */
    public static function onMessage($client_id, $message) {
-        // 向所有人发送 
-        Gateway::sendToAll("$client_id said $message");
+       $data = json_decode($message,1);
+       switch($data['type']){
+           case 'getOnline':
+               Gateway::sendToCurrentClient(json_encode(['type'=>"online",'num'=>Gateway::getAllClientCount()]));
+               break;
+       }
    }
-   
+
    /**
     * 当用户断开连接时触发
     * @param int $client_id 连接id
     */
    public static function onClose($client_id) {
-       // 向所有人发送 
-       GateWay::sendToAll("$client_id logout");
+       Gateway::sendToAll( json_encode(['type'=>"online",'num'=>Gateway::getAllClientCount()]));
    }
 }

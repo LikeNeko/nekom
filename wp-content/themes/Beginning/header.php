@@ -44,6 +44,11 @@
 				<?php Bing_mobile_header(); ?>
 			</header>
             <div id="placeholder"></div>
+            <div class="site_info panel" style="position: fixed;top: 100px;left: 10px;">
+                <div class="count_online">
+                    ☆ 当前在线人数：<span class="count_online_num" style="color: #81a4eb;">1</span>
+                </div>
+            </div>
 			<div class="box-md">
 				<?php Bing_banner_span12( 'header' ); ?>
 				<div class="wrapper-table-box">

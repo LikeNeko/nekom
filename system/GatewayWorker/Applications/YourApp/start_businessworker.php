@@ -26,6 +26,15 @@ $worker->count = 4;
 // 服务注册地址
 $worker->registerAddress = '127.0.0.1:1238';
 
+$worker->onWorkerStart = function($worker)
+{
+    global $db;
+    $db = new Workerman\MySQL\Connection('127.0.0.1',3306,'root','shibao123','neko');
+    global $redis;
+    $redis = new Redis();
+    $redis->connect('127.0.0.1');
+
+};
 // 如果不是在根目录启动，则运行runAll方法
 if(!defined('GLOBAL_START')) {
     Worker::runAll();

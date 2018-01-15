@@ -93,35 +93,19 @@
     100% { -moz-transform:rotate(0deg);}
 }
 
-/* Table Head */
 .context thead th {
     background-color: rgb(81, 130, 187);
     color: #fff;
     border-bottom-width: 0;
 }
-.context table{
-    border:1px rgb(81, 130, 187) solid !important;
-}
-
-/* Column Style */
-.context td {
-    color: #000;
-}
-/* Heading and Column Style */
-.context tr, .context th {
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(81, 130, 187);
-}
-
-/* Padding and font style */
 .context td, .context th {
     padding: 5px 10px;
-    font-size: 12px;
-    font-family: Verdana;
     font-weight: bold;
-    border: 1px #0064ff solid;
 }
+.context table {
+    border: 1px rgb(81, 130, 187) solid !important;
+}
+
 
 /* 给文章缩略图加模糊 */
 /*.posts-list>li .thumbnail-link .thumbnail {*/
@@ -228,6 +212,7 @@ code {
     text-shadow: 0px 0px 0px #555;
     margin: 2px;
     background-color: rgba(0, 0, 0, .04);
+    color: red;
 }
 /* logo光斑 */
 h1.logo:before {
@@ -321,7 +306,6 @@ h1.logo:before {
 
 /* 字体阴影 */
 section.context {
-    text-shadow: 0px 1px 1px #3b5384;
     font-size:14px;
 }
 
