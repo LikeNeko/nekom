@@ -13,6 +13,7 @@ http://www.gnu.org/licenses/gpl.txt
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+
 define('AUTOPTIMIZE_PLUGIN_DIR',plugin_dir_path(__FILE__));
 
 // Load config class

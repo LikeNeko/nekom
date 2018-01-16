@@ -30,7 +30,7 @@ use Workerman\Lib\Timer;
 class Events
 {
     public static function onWorkerStart(){
-        Timer::add(3, function(){
+        Timer::add(30, function(){
             Gateway::sendToAll( json_encode(['type'=>"online",'num'=>Gateway::getAllClientCount()]));
         });
     }

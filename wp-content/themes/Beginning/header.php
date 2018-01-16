@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>" />
         <link rel="shortcut icon" href=" /favicon.ico" />
-        <meta name="keywords"  content="wordpress 猫窝博客 猫窝 喵窝博客 喵窝 Neko" />
+        <meta name="keywords"  content="wordpress 猫窝博客 猫窝  Neko" />
         <meta name="google-site-verification" content="rr8BzOo1mxgRE_L1IsxXxikLZbJMIbSTaJ3YOWVCHjo" />
         <meta name="sogou_site_verification" content="yYtQJCYryd"/>
         <link rel="alternate" href="https://i.nekom.cc/" hreflang="zh-Hans" />

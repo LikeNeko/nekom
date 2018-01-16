@@ -69,9 +69,11 @@ if (/.*Firefox.*/.test(agent)) {
         e = e || window.event;
         var detail = e.detail;
         if (detail > 0) {
-            $("#header").css('display','none');
+            // $("#header").css('display','none');
+            $("#header").animate({'top': '100px'}, "slow");
         } else {
             $("#header").css('display','block');
+
         }
     });
 } else {
@@ -79,12 +81,43 @@ if (/.*Firefox.*/.test(agent)) {
         e = e || window.event;
         var wheelDelta = e.wheelDelta;
         if (wheelDelta > 0) {
-            $("#header").css('display','block');
+                headerShow();
+
 
         } else {
-            $("#header").css('display','none');
+
+                headerHide();
+            
+
         }
     }
+}
+
+function headerShow() {
+    // $("#header").css('display','block');
+    $("#header").animate({
+        opacity: 'show'
+    }, 600,function () {
+        $(".toc_widget").css({
+            top:'100px'
+        });
+        $(".site_info").css({
+            top:'100px'
+        });
+    });
+}
+function headerHide() {
+    // $("#header").css('display','none');
+    $("#header").animate({
+        opacity: 'hide'
+    }, 600,function () {
+        $(".toc_widget").css({
+            top:'2px'
+        });
+        $(".site_info").css({
+            top:'2px'
+        });
+    });
 }
 
 (function ($, document, window, args) {
